@@ -5,9 +5,9 @@ initialCategories = [""]
 
 MCTestVariables = {"Browser":"*chrome", \
                    "TestSite":"http://dalmatia.mirocommunity.org/", \
-                   "ResultOutputDirectory":r"/var/www/localtv_dev/djangoproject/dalmatia_project/selenium/sel-rc/MiroCommunity/TestResults/file_", \
-                   "GraphicFilesDirectory":r"/var/www/localtv_dev/djangoproject/dalmatia_project/selenium/sel-rc/MiroCommunity/TestInput/", \
-                   "TimeOut":"150000", \
+                   "ResultOutputDirectory":r"/home/jed/public/Results/", \
+                   "GraphicFilesDirectory":r"/home/jed/RC-testing/MiroCommunity/TestInput/", \
+                   "TimeOut":"60000", \
                    "AdminLink":"View Admin", \
                    "AdminLogin":"seleniumTestAdmin", \
                    "AdminPassword":"TestAdmin", \
