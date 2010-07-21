@@ -145,9 +145,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>Miro Community Test Suite</h1>
-<p class='attribute'><strong>Start Time:</strong> 2010-07-21 04:49:02</p>
-<p class='attribute'><strong>Duration:</strong> 1:15:58.292924</p>
-<p class='attribute'><strong>Status:</strong> Pass 21 Failure 1 Error 38</p>
+<p class='attribute'><strong>Start Time:</strong> 2010-07-21 08:04:49</p>
+<p class='attribute'><strong>Duration:</strong> 1:25:48.705911</p>
+<p class='attribute'><strong>Status:</strong> Pass 24 Failure 1 Error 35</p>
 
 <p class='description'>Results of test run</p>
 </div>
@@ -177,19 +177,19 @@ function showOutput(id, name) {
     <td>View</td>
 </tr>
 
-<tr class='passClass'>
+<tr class='errorClass'>
     <td>testcases_users.TestCase_AddNewAdmin</td>
     <td>1</td>
+    <td>0</td>
+    <td>0</td>
     <td>1</td>
-    <td>0</td>
-    <td>0</td>
     <td><a href="javascript:showClassDetail('c1',1)">Detail</a></td>
 </tr>
 
-<tr id='pt1.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_AddNewAdmin</div></td>
-    <td colspan='5' align='center'><a href="javascript:showOutput('pt1.1', 'test_AddNewAdmin')">pass</a>
-<script language="javascript" type="text/javascript">output_list['pt1.1'] = 'Logged in as seleniumTestAdmin\nDuplicate user found. Deleting it...\nUser deleted: vitalii1\nAdding a new username vitalii1\nUser added to the list\nLogging out...\nLogging in as user: vitalii1\nLogged in as vitalii1\nLogged as Admin\n';</script>
+<tr id='ft1.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_AddNewAdmin</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft1.1', 'test_AddNewAdmin')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft1.1'] = 'Logged in as seleniumTestAdmin\nDuplicate user found. Deleting it...\nUser deleted: vitalii1\nAdding a new username vitalii1\nUser added to the list\nLogging out...\nLogging in as user: vitalii1\nLogged in as vitalii1\n********ERROR: Log in user vitalii1 as Admin fail\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_users.py\", line 70, in tearDown\n    self.assertEqual([], self.verificationErrors)\nAssertionError: [] != [\'Log in user vitalii1 as Admin fail\']\n';</script>
 </td>
 </tr>
 
@@ -209,19 +209,19 @@ function showOutput(id, name) {
 </td>
 </tr>
 
-<tr class='passClass'>
+<tr class='errorClass'>
     <td>testcases_users.TestCase_EditUser</td>
     <td>1</td>
+    <td>0</td>
+    <td>0</td>
     <td>1</td>
-    <td>0</td>
-    <td>0</td>
     <td><a href="javascript:showClassDetail('c3',1)">Detail</a></td>
 </tr>
 
-<tr id='pt3.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_EditUser</div></td>
-    <td colspan='5' align='center'><a href="javascript:showOutput('pt3.1', 'test_EditUser')">pass</a>
-<script language="javascript" type="text/javascript">output_list['pt3.1'] = 'Logged in as seleniumTestAdmin\nUser finded start to edit\nStart to edit field\nUser vitalii4 edited\nLogging in as user: vitalii4\nLogged in as vitalii4\nLogged as Admin\n';</script>
+<tr id='ft3.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_EditUser</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft3.1', 'test_EditUser')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft3.1'] = 'Logged in as seleniumTestAdmin\nUser finded start to edit\nStart to edit field\nUser vitalii4 edited\nLogging in as user: vitalii4\nLogged in as vitalii4\n********ERROR: Log in user vitalii4 as Admin fail\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_users.py\", line 165, in tearDown\n    self.assertEqual([], self.verificationErrors)\nAssertionError: [] != [\'Log in user vitalii4 as Admin fail\']\n';</script>
 </td>
 </tr>
 
@@ -333,7 +333,7 @@ function showOutput(id, name) {
 <tr id='pt10.1' class='hiddenRow'>
     <td class='none'><div class='testcase'>test_EditUserProfile</div></td>
     <td colspan='5' align='center'><a href="javascript:showOutput('pt10.1', 'test_EditUserProfile')">pass</a>
-<script language="javascript" type="text/javascript">output_list['pt10.1'] = 'Logged in as seleniumTestAdmin\nDuplicate user found. Deleting it...\nUser deleted: vitalii\nAdding a new username vitalii\nUser added to the list\nLogging out...\nLog in as created user\nLogged in as vitalii\nStarting edit profile vitalii\nView profile username successful\nView profile name successful\nView profile location successful\nView profile website successful\nView profile description successful\n';</script>
+<script language="javascript" type="text/javascript">output_list['pt10.1'] = 'Logged in as seleniumTestAdmin\nDuplicate user found. Deleting it...\nUser deleted: vitalii\nAdding a new username vitalii\nUser added to the list\nLogging out...\nLog in as created user\nLogged in as vitalii\nStarting edit profile vitalii\nView profile location successful\nView profile website successful\n';</script>
 </td>
 </tr>
 
@@ -349,7 +349,7 @@ function showOutput(id, name) {
 <tr id='pt11.1' class='hiddenRow'>
     <td class='none'><div class='testcase'>test_ViewUser</div></td>
     <td colspan='5' align='center'><a href="javascript:showOutput('pt11.1', 'test_ViewUser')">pass</a>
-<script language="javascript" type="text/javascript">output_list['pt11.1'] = 'Logged in as seleniumTestAdmin\nUser finded, view user\nView profile username successful\nView profile name successful\n';</script>
+<script language="javascript" type="text/javascript">output_list['pt11.1'] = 'Logged in as seleniumTestAdmin\nUser finded, view user\n';</script>
 </td>
 </tr>
 
@@ -678,51 +678,51 @@ function showOutput(id, name) {
 </td>
 </tr>
 
-<tr class='errorClass'>
+<tr class='passClass'>
     <td>testcases_manage.TestCase_BulkDeleteSources</td>
     <td>1</td>
-    <td>0</td>
-    <td>0</td>
     <td>1</td>
+    <td>0</td>
+    <td>0</td>
     <td><a href="javascript:showClassDetail('c31',1)">Detail</a></td>
 </tr>
 
-<tr id='ft31.1' class='none'>
-    <td class='errorCase'><div class='testcase'>test_BulkDeleteSources</div></td>
-    <td colspan='5' align='center'><a href="javascript:showOutput('ft31.1', 'test_BulkDeleteSources')">error</a>
-<script language="javascript" type="text/javascript">output_list['ft31.1'] = 'Logged in as seleniumTestAdmin\nRetrieving the current list of sources...\nFull list of available sources:\n[u\'23andMe\', u\'Aaron Ekroth\', u\'Aslann\', u\'Best of Attenborough\', u\'Croatia\', u\'Dalmatian resorts\', u\'dapperQ\', u\'Doug Thompson\', u\'edinburgh\', u\'Gunther Machu\', u\'highcrofttv\', u\'Maxiedude13\', u\'MSNBC Rachel Maddow (video)\', u\'My Wildlife Wonders\', u\'Nainesh\', u\'Natural History\', u\'renault\', u\'TELUSWorldofScience\', u\'universityofbc\', u\'volcanoes\', u\'whale watching\']\nThe following sources will be deleted:\n[u\'Croatia\', u\'Dalmatian resorts\']\nMarked source: Croatia\nMarked source: Dalmatian resorts\nDeleting the marked sources...\nChecking source: Croatia...\nOK\nChecking source: Dalmatian resorts...\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_manage.py\", line 218, in test_BulkDeleteSources\n    sources.BulkDeleteSource(self,sel,deleteList)\n  File \"/home/jed/RC-testing/MiroCommunity/sources.py\", line 899, in BulkDeleteSource\n    if SourceLocation(self,sel,item)!=[0,0]:\n  File \"/home/jed/RC-testing/MiroCommunity/sources.py\", line 112, in SourceLocation\n    if tempSource==source:\nUnboundLocalError: local variable \'tempSource\' referenced before assignment\n';</script>
+<tr id='pt31.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_BulkDeleteSources</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('pt31.1', 'test_BulkDeleteSources')">pass</a>
+<script language="javascript" type="text/javascript">output_list['pt31.1'] = 'Logged in as seleniumTestAdmin\nRetrieving the current list of sources...\nFull list of available sources:\n[u\'23andMe\', u\'Aaron Ekroth\', u\'Aslann\', u\'Best of Attenborough\', u\'Croatia\', u\'Dalmatian resorts\', u\'dapperQ\', u\'Doug Thompson\', u\'edinburgh\', u\'Gunther Machu\', u\'highcrofttv\', u\'Maxiedude13\', u\'MSNBC Rachel Maddow (video)\', u\'My Wildlife Wonders\', u\'Nainesh\', u\'Natural History\', u\'renault\', u\'TELUSWorldofScience\', u\'universityofbc\', u\'volcanoes\', u\'whale watching\']\nThe following sources will be deleted:\n[u\'Croatia\', u\'Dalmatian resorts\']\nMarked source: Croatia\nMarked source: Dalmatian resorts\nDeleting the marked sources...\nChecking source: Croatia...\nOK\nChecking source: Dalmatian resorts...\nOK\n';</script>
 </td>
 </tr>
 
-<tr class='errorClass'>
+<tr class='passClass'>
     <td>testcases_manage.TestCase_SearchForVideos</td>
     <td>1</td>
-    <td>0</td>
-    <td>0</td>
     <td>1</td>
+    <td>0</td>
+    <td>0</td>
     <td><a href="javascript:showClassDetail('c32',1)">Detail</a></td>
 </tr>
 
-<tr id='ft32.1' class='none'>
-    <td class='errorCase'><div class='testcase'>test_SearchForVideos</div></td>
-    <td colspan='5' align='center'><a href="javascript:showOutput('ft32.1', 'test_SearchForVideos')">error</a>
-<script language="javascript" type="text/javascript">output_list['ft32.1'] = 'Logged in as seleniumTestAdmin\nChecking that \'Search for Video\' button is available\nOK\nLooking for \'Search Video Sites\' pop-up...\nOK\nEntering search criteria...\nSubmitting search criteria...\nChecking the URL of the page with query results...\nhttp://dalmatia.mirocommunity.org/admin/manage/search/?query=tango\nOK\nChecking the title of the page with query results...\nOK\n10 videos found on the first results page\nApproving video \"MIDANZA 2010 - Gustavo Rosas y Gisela Natoli.Tango Argentino en Paris..mp4\"...\nOK\nFeaturing video \"MIDANZA 2010 - Gustavo Rosas y Gisela Natoli.Tango Argentino en Paris..mp4\"...\nOK\nAdding video \"MIDANZA 2010 - Gustavo Rosas y Gisela Natoli.Tango Nuevo.\" to the queue...\nOK\n \nSearching for the Approved video...\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_manage.py\", line 280, in test_SearchForVideos\n    queue.CheckVideoStatus(self,sel,video1title,\"Approved\")\n  File \"/home/jed/RC-testing/MiroCommunity/queue.py\", line 76, in CheckVideoStatus\n    trimmedTitle = mclib.split_by_punctuation_char(title)\nAttributeError: \'module\' object has no attribute \'split_by_punctuation_char\'\n';</script>
+<tr id='pt32.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_SearchForVideos</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('pt32.1', 'test_SearchForVideos')">pass</a>
+<script language="javascript" type="text/javascript">output_list['pt32.1'] = 'Logged in as seleniumTestAdmin\nChecking that \'Search for Video\' button is available\nOK\nLooking for \'Search Video Sites\' pop-up...\nOK\nEntering search criteria...\nSubmitting search criteria...\nChecking the URL of the page with query results...\nhttp://dalmatia.mirocommunity.org/admin/manage/search/?query=tango\nOK\nChecking the title of the page with query results...\nOK\n10 videos found on the first results page\nApproving video \"Three to Tango Full Movie Part 1-9 HD\"...\nOK\nFeaturing video \"Beata a Stefan: Tango na piesku v Zlutych Laznich\"...\nOK\nAdding video \"Blanka a Stefan: Tango na piesku v Zlutych Laznich\" to the queue...\nOK\n \nSearching for the Approved video...\nFound video \"Three to Tango Full Movie Part 1-9 HD\" in the list of Approved videos - OK\n \n \nSearching for the Featured video...\nFound video \"Beata a Stefan: Tango na piesku v Zlutych Laznich\" in the list of Featured videos - OK\n \nSearching for the video in the queue...\nFound video \"Blanka a Stefan: Tango na piesku v Zlutych Laznich\" in the queue on the last page - OK\n';</script>
 </td>
 </tr>
 
-<tr class='errorClass'>
+<tr class='passClass'>
     <td>testcases_manage.TestCase_SearchVideoByNonASCIITerm</td>
     <td>1</td>
-    <td>0</td>
-    <td>0</td>
     <td>1</td>
+    <td>0</td>
+    <td>0</td>
     <td><a href="javascript:showClassDetail('c33',1)">Detail</a></td>
 </tr>
 
-<tr id='ft33.1' class='none'>
-    <td class='errorCase'><div class='testcase'>test_SearchVideoByNonASCIITerm</div></td>
-    <td colspan='5' align='center'><a href="javascript:showOutput('ft33.1', 'test_SearchVideoByNonASCIITerm')">error</a>
-<script language="javascript" type="text/javascript">output_list['ft33.1'] = 'Logged in as seleniumTestAdmin\nChecking that \'Search for Video\' button is available\nOK\nLooking for \'Search Video Sites\' pop-up...\nOK\nEntering search criteria...\nSubmitting search criteria...\nChecking the URL of the page with query results...\nhttp://dalmatia.mirocommunity.org/admin/manage/search/?query=%D1%82%D1%83%D1%80%D0%B8%D0%B7%D0%BC\nOK\nChecking the title of the page with query results...\nOK\n10 videos found on the first results page\nApproving video \"33_Межрегиональная выставка Туризма.mp4\"...\nOK\nFeaturing video \"Tourism in the Huasteca San Luis Potosi, Mexico.Xilitla\"...\nOK\nAdding video \"Видео Презентация TVI Express на русском языке.mp4\" to the queue...\nOK\n \nSearching for the Approved video...\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_manage.py\", line 361, in test_SearchVideoByNonASCIITerm\n    queue.CheckVideoStatus(self,sel,video1title,\"Approved\")\n  File \"/home/jed/RC-testing/MiroCommunity/queue.py\", line 76, in CheckVideoStatus\n    trimmedTitle = mclib.split_by_punctuation_char(title)\nAttributeError: \'module\' object has no attribute \'split_by_punctuation_char\'\n';</script>
+<tr id='pt33.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_SearchVideoByNonASCIITerm</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('pt33.1', 'test_SearchVideoByNonASCIITerm')">pass</a>
+<script language="javascript" type="text/javascript">output_list['pt33.1'] = 'Logged in as seleniumTestAdmin\nChecking that \'Search for Video\' button is available\nOK\nLooking for \'Search Video Sites\' pop-up...\nOK\nEntering search criteria...\nSubmitting search criteria...\nChecking the URL of the page with query results...\nhttp://dalmatia.mirocommunity.org/admin/manage/search/?query=%D1%82%D1%83%D1%80%D0%B8%D0%B7%D0%BC\nOK\nChecking the title of the page with query results...\nOK\n10 videos found on the first results page\nApproving video \"И вот мы опять не вписались в струю...\"...\nOK\nFeaturing video \"туризм.mpg\"...\nOK\nAdding video \"Снегопад в Бразилии, 2010\" to the queue...\nOK\n \nSearching for the Approved video...\nFound video \"И вот мы опять не вписались в струю...\" in the list of Approved videos - OK\n \n \nSearching for the Featured video...\nFound video \"туризм.mpg\" in the list of Featured videos - OK\n\nSearching for the video in the queue...\nFound video \"Снегопад в Бразилии, 2010\" in the queue on the last page - OK\n';</script>
 </td>
 </tr>
 
@@ -744,24 +744,17 @@ function showOutput(id, name) {
 
 <tr class='errorClass'>
     <td>testcases_manage.TestCase_SortSources</td>
-    <td>2</td>
+    <td>1</td>
+    <td>0</td>
     <td>0</td>
     <td>1</td>
-    <td>1</td>
-    <td><a href="javascript:showClassDetail('c35',2)">Detail</a></td>
+    <td><a href="javascript:showClassDetail('c35',1)">Detail</a></td>
 </tr>
 
 <tr id='ft35.1' class='none'>
-    <td class='failCase'><div class='testcase'>test_SortSources</div></td>
-    <td colspan='5' align='center'><a href="javascript:showOutput('ft35.1', 'test_SortSources')">fail</a>
-<script language="javascript" type="text/javascript">output_list['ft35.1'] = 'Logged in as seleniumTestAdmin\n\nSorting the list of sources by NAME in order: Asc...\n********ERROR: Expected link for sorting by NAME ASCENDING not found\nExpected link: ?sort=name__lower\n- Actual link: /admin/manage/\n[u\'whale watching\', u\'volcanoes\', u\'universityofbc\', u\'TELUSWorldofScience\', u\'renault\', u\'Natural History\', u\'Nainesh\', u\'My Wildlife Wonders\', u\'MSNBC Rachel Maddow (video)\', u\'Maxiedude13\', u\'highcrofttv\', u\'Gunther Machu\', u\'edinburgh\', u\'Doug Thompson\', u\'dapperQ\', u\'Dalmatian resorts\', u\'Croatia\', u\'Best of Attenborough\', u\'Aslann\', u\'Aaron Ekroth\', u\'23andMe\']\n********ERROR: Sorting by NAME ASCENDING was incorrect\n\nSorting the list of sources by NAME in order: Desc...\n[u\'whale watching\', u\'volcanoes\', u\'universityofbc\', u\'TELUSWorldofScience\', u\'renault\', u\'Natural History\', u\'Nainesh\', u\'My Wildlife Wonders\', u\'MSNBC Rachel Maddow (video)\', u\'Maxiedude13\', u\'highcrofttv\', u\'Gunther Machu\', u\'edinburgh\', u\'Doug Thompson\', u\'dapperQ\', u\'Dalmatian resorts\', u\'Croatia\', u\'Best of Attenborough\', u\'Aslann\', u\'Aaron Ekroth\', u\'23andMe\']\nSorting checked - CORRECT\n\nSorting the list of sources by TYPE in order: Asc...\n[u\'Feed\', u\'Search\', u\'Search\', u\'Search\', u\'Search\', u\'Search\', u\'User: Vimeo\', u\'User: Vimeo\', u\'User: Vimeo\', u\'User: Vimeo\', u\'User: Vimeo\', u\'User: Vimeo\', u\'User: Vimeo\', u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\']\nSorting checked - CORRECT\n\nSorting the list of sources by TYPE in order: Desc...\n[u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\', u\'User: Vimeo\', u\'User: Vimeo\', u\'User: Vimeo\', u\'User: Vimeo\', u\'User: Vimeo\', u\'User: Vimeo\', u\'User: Vimeo\', u\'Search\', u\'Search\', u\'Search\', u\'Search\', u\'Search\', u\'Feed\']\nSorting checked - CORRECT\n\nSorting the list of sources by AUTOAPPROVE in order: Asc...\n[\'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'On\', \'On\', \'On\', \'On\']\nSorting checked - CORRECT\n\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_manage.py\", line 539, in test_SortSources\n    sources.SortSources(self,sel,\"AutoApprove\",\"Desc\")\n  File \"/home/jed/RC-testing/MiroCommunity/sources.py\", line 915, in SortSources\n    NavigateToManageSources(self,sel)\n  File \"/home/jed/RC-testing/MiroCommunity/sources.py\", line 68, in NavigateToManageSources\n    self.fail(\"Not logged in as an Administrator\")\nAssertionError: Not logged in as an Administrator\n';</script>
-</td>
-</tr>
-
-<tr id='ft35.2' class='none'>
     <td class='errorCase'><div class='testcase'>test_SortSources</div></td>
-    <td colspan='5' align='center'><a href="javascript:showOutput('ft35.2', 'test_SortSources')">error</a>
-<script language="javascript" type="text/javascript">output_list['ft35.2'] = 'Logged in as seleniumTestAdmin\n\nSorting the list of sources by NAME in order: Asc...\n********ERROR: Expected link for sorting by NAME ASCENDING not found\nExpected link: ?sort=name__lower\n- Actual link: /admin/manage/\n[u\'whale watching\', u\'volcanoes\', u\'universityofbc\', u\'TELUSWorldofScience\', u\'renault\', u\'Natural History\', u\'Nainesh\', u\'My Wildlife Wonders\', u\'MSNBC Rachel Maddow (video)\', u\'Maxiedude13\', u\'highcrofttv\', u\'Gunther Machu\', u\'edinburgh\', u\'Doug Thompson\', u\'dapperQ\', u\'Dalmatian resorts\', u\'Croatia\', u\'Best of Attenborough\', u\'Aslann\', u\'Aaron Ekroth\', u\'23andMe\']\n********ERROR: Sorting by NAME ASCENDING was incorrect\n\nSorting the list of sources by NAME in order: Desc...\n[u\'whale watching\', u\'volcanoes\', u\'universityofbc\', u\'TELUSWorldofScience\', u\'renault\', u\'Natural History\', u\'Nainesh\', u\'My Wildlife Wonders\', u\'MSNBC Rachel Maddow (video)\', u\'Maxiedude13\', u\'highcrofttv\', u\'Gunther Machu\', u\'edinburgh\', u\'Doug Thompson\', u\'dapperQ\', u\'Dalmatian resorts\', u\'Croatia\', u\'Best of Attenborough\', u\'Aslann\', u\'Aaron Ekroth\', u\'23andMe\']\nSorting checked - CORRECT\n\nSorting the list of sources by TYPE in order: Asc...\n[u\'Feed\', u\'Search\', u\'Search\', u\'Search\', u\'Search\', u\'Search\', u\'User: Vimeo\', u\'User: Vimeo\', u\'User: Vimeo\', u\'User: Vimeo\', u\'User: Vimeo\', u\'User: Vimeo\', u\'User: Vimeo\', u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\']\nSorting checked - CORRECT\n\nSorting the list of sources by TYPE in order: Desc...\n[u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\', u\'User: Vimeo\', u\'User: Vimeo\', u\'User: Vimeo\', u\'User: Vimeo\', u\'User: Vimeo\', u\'User: Vimeo\', u\'User: Vimeo\', u\'Search\', u\'Search\', u\'Search\', u\'Search\', u\'Search\', u\'Feed\']\nSorting checked - CORRECT\n\nSorting the list of sources by AUTOAPPROVE in order: Asc...\n[\'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'On\', \'On\', \'On\', \'On\']\nSorting checked - CORRECT\n\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_manage.py\", line 552, in tearDown\n    self.assertEqual([], self.verificationErrors)\nAssertionError: [] != [\'Expected link for sorting by NAME ASCENDING not found\', \'Sorting by NAME ASCENDING was incorrect\']\n';</script>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft35.1', 'test_SortSources')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft35.1'] = 'Logged in as seleniumTestAdmin\n\nSorting the list of sources by NAME in order: Asc...\n********ERROR: Expected link for sorting by NAME ASCENDING not found\nExpected link: ?sort=name__lower\n- Actual link: /admin/manage/\n[u\'whale watching\', u\'volcanoes\', u\'universityofbc\', u\'TELUSWorldofScience\', u\'renault\', u\'Natural History\', u\'Nainesh\', u\'My Wildlife Wonders\', u\'MSNBC Rachel Maddow (video)\', u\'Maxiedude13\', u\'highcrofttv\', u\'Gunther Machu\', u\'edinburgh\', u\'Doug Thompson\', u\'dapperQ\', u\'Dalmatian resorts\', u\'Croatia\', u\'Best of Attenborough\', u\'Aslann\', u\'Aaron Ekroth\', u\'23andMe\']\n********ERROR: Sorting by NAME ASCENDING was incorrect\n\nSorting the list of sources by NAME in order: Desc...\n[u\'whale watching\', u\'volcanoes\', u\'universityofbc\', u\'TELUSWorldofScience\', u\'renault\', u\'Natural History\', u\'Nainesh\', u\'My Wildlife Wonders\', u\'MSNBC Rachel Maddow (video)\', u\'Maxiedude13\', u\'highcrofttv\', u\'Gunther Machu\', u\'edinburgh\', u\'Doug Thompson\', u\'dapperQ\', u\'Dalmatian resorts\', u\'Croatia\', u\'Best of Attenborough\', u\'Aslann\', u\'Aaron Ekroth\', u\'23andMe\']\nSorting checked - CORRECT\n\nSorting the list of sources by TYPE in order: Asc...\n[u\'Feed\', u\'Search\', u\'Search\', u\'Search\', u\'Search\', u\'Search\', u\'User: Vimeo\', u\'User: Vimeo\', u\'User: Vimeo\', u\'User: Vimeo\', u\'User: Vimeo\', u\'User: Vimeo\', u\'User: Vimeo\', u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\']\nSorting checked - CORRECT\n\nSorting the list of sources by TYPE in order: Desc...\n[u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\', u\'User: YouTube\', u\'User: Vimeo\', u\'User: Vimeo\', u\'User: Vimeo\', u\'User: Vimeo\', u\'User: Vimeo\', u\'User: Vimeo\', u\'User: Vimeo\', u\'Search\', u\'Search\', u\'Search\', u\'Search\', u\'Search\', u\'Feed\']\nSorting checked - CORRECT\n\nSorting the list of sources by AUTOAPPROVE in order: Asc...\n[\'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'On\', \'On\', \'On\', \'On\']\nSorting checked - CORRECT\n\nSorting the list of sources by AUTOAPPROVE in order: Desc...\n[\'On\', \'On\', \'On\', \'On\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\', \'Off\']\nSorting checked - CORRECT\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_manage.py\", line 552, in tearDown\n    self.assertEqual([], self.verificationErrors)\nAssertionError: [] != [\'Expected link for sorting by NAME ASCENDING not found\', \'Sorting by NAME ASCENDING was incorrect\']\n';</script>
 </td>
 </tr>
 
@@ -797,51 +790,58 @@ function showOutput(id, name) {
 </td>
 </tr>
 
-<tr class='errorClass'>
+<tr class='passClass'>
     <td>testcases_queue.TestCase_ApproveVideo</td>
     <td>1</td>
-    <td>0</td>
-    <td>0</td>
     <td>1</td>
+    <td>0</td>
+    <td>0</td>
     <td><a href="javascript:showClassDetail('c38',1)">Detail</a></td>
 </tr>
 
-<tr id='ft38.1' class='none'>
-    <td class='errorCase'><div class='testcase'>test_ApproveVideo</div></td>
-    <td colspan='5' align='center'><a href="javascript:showOutput('ft38.1', 'test_ApproveVideo')">error</a>
-<script language="javascript" type="text/javascript">output_list['ft38.1'] = 'Logged in as seleniumTestAdmin\nApproving video No.1 on queue page 1000000...\nOK\n \nSearching for the Approved video...\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_queue.py\", line 40, in test_ApproveVideo\n    queue.ProcessVideo(self,sel,page,number,\"Approved\")\n  File \"/home/jed/RC-testing/MiroCommunity/queue.py\", line 151, in ProcessVideo\n    print CheckVideoStatus(self,sel,videoTitle,action)\n  File \"/home/jed/RC-testing/MiroCommunity/queue.py\", line 76, in CheckVideoStatus\n    trimmedTitle = mclib.split_by_punctuation_char(title)\nAttributeError: \'module\' object has no attribute \'split_by_punctuation_char\'\n';</script>
+<tr id='pt38.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_ApproveVideo</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('pt38.1', 'test_ApproveVideo')">pass</a>
+<script language="javascript" type="text/javascript">output_list['pt38.1'] = 'Logged in as seleniumTestAdmin\nApproving video No.1 on queue page 1000000...\nOK\n \nSearching for the Approved video...\nFound video \"Blanka a Stefan: Tango na piesku v Zlutych Laznich\" in the list of Approved videos - OK\nTrue\n';</script>
 </td>
 </tr>
 
-<tr class='errorClass'>
+<tr class='passClass'>
     <td>testcases_queue.TestCase_FeatureVideo</td>
     <td>1</td>
-    <td>0</td>
-    <td>0</td>
     <td>1</td>
+    <td>0</td>
+    <td>0</td>
     <td><a href="javascript:showClassDetail('c39',1)">Detail</a></td>
 </tr>
 
-<tr id='ft39.1' class='none'>
-    <td class='errorCase'><div class='testcase'>test_FeatureVideo</div></td>
-    <td colspan='5' align='center'><a href="javascript:showOutput('ft39.1', 'test_FeatureVideo')">error</a>
-<script language="javascript" type="text/javascript">output_list['ft39.1'] = 'Logged in as seleniumTestAdmin\nFeaturing video No.1 on queue page 1...\nOK\n \nSearching for the Featured video...\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_queue.py\", line 64, in test_FeatureVideo\n    queue.ProcessVideo(self,sel,page,number,\"Featured\")\n  File \"/home/jed/RC-testing/MiroCommunity/queue.py\", line 151, in ProcessVideo\n    print CheckVideoStatus(self,sel,videoTitle,action)\n  File \"/home/jed/RC-testing/MiroCommunity/queue.py\", line 76, in CheckVideoStatus\n    trimmedTitle = mclib.split_by_punctuation_char(title)\nAttributeError: \'module\' object has no attribute \'split_by_punctuation_char\'\n';</script>
+<tr id='pt39.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_FeatureVideo</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('pt39.1', 'test_FeatureVideo')">pass</a>
+<script language="javascript" type="text/javascript">output_list['pt39.1'] = 'Logged in as seleniumTestAdmin\nFeaturing video No.1 on queue page 1...\nOK\n \nSearching for the Featured video...\nFound video \"Снегопад в Бразилии, 2010\" in the list of Featured videos - OK\nTrue\n';</script>
 </td>
 </tr>
 
 <tr class='errorClass'>
     <td>testcases_queue.TestCase_RejectVideo</td>
-    <td>1</td>
+    <td>2</td>
     <td>0</td>
     <td>0</td>
-    <td>1</td>
-    <td><a href="javascript:showClassDetail('c40',1)">Detail</a></td>
+    <td>2</td>
+    <td><a href="javascript:showClassDetail('c40',2)">Detail</a></td>
 </tr>
 
 <tr id='ft40.1' class='none'>
     <td class='errorCase'><div class='testcase'>test_RejectVideo</div></td>
     <td colspan='5' align='center'><a href="javascript:showOutput('ft40.1', 'test_RejectVideo')">error</a>
-<script language="javascript" type="text/javascript">output_list['ft40.1'] = 'Logged in as seleniumTestAdmin\nRejecting video No.1 on queue page 1...\nOK\n \nSearching for the Rejected video...\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_queue.py\", line 87, in test_RejectVideo\n    queue.ProcessVideo(self,sel,page,number,\"Rejected\")\n  File \"/home/jed/RC-testing/MiroCommunity/queue.py\", line 151, in ProcessVideo\n    print CheckVideoStatus(self,sel,videoTitle,action)\n  File \"/home/jed/RC-testing/MiroCommunity/queue.py\", line 76, in CheckVideoStatus\n    trimmedTitle = mclib.split_by_punctuation_char(title)\nAttributeError: \'module\' object has no attribute \'split_by_punctuation_char\'\n';</script>
+<script language="javascript" type="text/javascript">output_list['ft40.1'] = 'Logged in as seleniumTestAdmin\n********ERROR: Video title not found\nRejecting video No.1 on queue page 1...\n********ERROR: Rejecte link not found for the video\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_queue.py\", line 87, in test_RejectVideo\n    queue.ProcessVideo(self,sel,page,number,\"Rejected\")\n  File \"/home/jed/RC-testing/MiroCommunity/queue.py\", line 151, in ProcessVideo\n    print CheckVideoStatus(self,sel,videoTitle,action)\nUnboundLocalError: local variable \'videoTitle\' referenced before assignment\n';</script>
+</td>
+</tr>
+
+<tr id='ft40.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_RejectVideo</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft40.2', 'test_RejectVideo')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft40.2'] = 'Logged in as seleniumTestAdmin\n********ERROR: Video title not found\nRejecting video No.1 on queue page 1...\n********ERROR: Rejecte link not found for the video\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_queue.py\", line 93, in tearDown\n    self.assertEqual([], self.verificationErrors)\nAssertionError: [] != [\'Video title not found\', \'Rejecte link not found for the video\']\n';</script>
 </td>
 </tr>
 
@@ -1049,7 +1049,7 @@ function showOutput(id, name) {
 <tr id='ft53.1' class='none'>
     <td class='errorCase'><div class='testcase'>test_case</div></td>
     <td colspan='5' align='center'><a href="javascript:showOutput('ft53.1', 'test_case')">error</a>
-<script language="javascript" type="text/javascript">output_list['ft53.1'] = '\nRunning test case in theme: LIST\nLogged in as seleniumTestAdmin\nStarting test for UNLOGGED USER\nClicking first video on the page...\nGenerating and posting a comment...\nAsserting comment is on the page...\nStarting test for LOGGED USER\nLogging in as User...\nLogged in as seleniumTestUser\nClicking on the first video on the page...\nGenerating and posting a new comment...\nAsserting the comment is on the page...\nGoing back on main page...\nLogging out...\nStarting test for ADMIN\nLogging in as admin...\nLogged in as seleniumTestAdmin\nClicking first video on the page...\nGenerating and posting new comment...\nAsserting comment is on the page...\nDeleting comment posted by unlogged user...\nDeleting comment posted by logged user...\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_comments.py\", line 577, in test_case\n    self.AdminTest()\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_comments.py\", line 505, in LoggedAsAdmin_CommentPosted\n    sel.click(self.themeToTest.deleteCommentButtonPart1 + self.commentUser +self.themeToTest.deleteCommentButtonPart2)\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 284, in click\n    self.do_command(\"click\", [locator,])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 215, in do_command\n    raise Exception, data\nException: ERROR: Element //li[contains(.,\'Test comment:_6h2m42sec_21/7/2010\')]/div/div/form[button=\'delete\']/button not found\n';</script>
+<script language="javascript" type="text/javascript">output_list['ft53.1'] = '\nRunning test case in theme: LIST\nLogged in as seleniumTestAdmin\nStarting test for UNLOGGED USER\nClicking first video on the page...\nGenerating and posting a comment...\nAsserting comment is on the page...\nStarting test for LOGGED USER\nLogging in as User...\nLogged in as seleniumTestUser\nClicking on the first video on the page...\nGenerating and posting a new comment...\nAsserting the comment is on the page...\nGoing back on main page...\nLogging out...\nStarting test for ADMIN\nLogging in as admin...\nLogged in as seleniumTestAdmin\nClicking first video on the page...\nGenerating and posting new comment...\nAsserting comment is on the page...\nDeleting comment posted by unlogged user...\nDeleting comment posted by logged user...\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_comments.py\", line 577, in test_case\n    self.AdminTest()\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_comments.py\", line 505, in LoggedAsAdmin_CommentPosted\n    sel.click(self.themeToTest.deleteCommentButtonPart1 + self.commentUser +self.themeToTest.deleteCommentButtonPart2)\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 284, in click\n    self.do_command(\"click\", [locator,])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 215, in do_command\n    raise Exception, data\nException: ERROR: Element //li[contains(.,\'Test comment:_9h28m25sec_21/7/2010\')]/div/div/form[button=\'delete\']/button not found\n';</script>
 </td>
 </tr>
 
@@ -1065,7 +1065,7 @@ function showOutput(id, name) {
 <tr id='ft54.1' class='none'>
     <td class='errorCase'><div class='testcase'>test_case</div></td>
     <td colspan='5' align='center'><a href="javascript:showOutput('ft54.1', 'test_case')">error</a>
-<script language="javascript" type="text/javascript">output_list['ft54.1'] = '\nRunning test case in theme: LIST\nLogged in as seleniumTestAdmin\nStarting test for UNLOGGED USER\nClicking first video on the page...\nChecking that input fields to post a comment are not on the page...\nStarting test for LOGGED USER\nLogging in as User...\nLogged in as seleniumTestUser\nClicking on the first video on the page...\nGenerating and posting a new comment...\nAsserting the comment is on the page...\nGoing back on main page...\nLogging out...\nStarting test for ADMIN\nLogging in as admin...\nLogged in as seleniumTestAdmin\nClicking first video on the page...\nGenerating and posting new comment...\nAsserting comment is on the page...\nDeleting comment posted by logged user...\nDeleting comment posted by Admin...\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_comments.py\", line 577, in test_case\n    self.AdminTest()\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_comments.py\", line 509, in LoggedAsAdmin_CommentPosted\n    sel.click(self.themeToTest.deleteCommentButtonPart1 + self.comment +self.themeToTest.deleteCommentButtonPart2)\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 284, in click\n    self.do_command(\"click\", [locator,])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 215, in do_command\n    raise Exception, data\nException: ERROR: Element //li[contains(.,\'Test comment:_6h3m39sec_21/7/2010\')]/div/div/form[button=\'delete\']/button not found\n';</script>
+<script language="javascript" type="text/javascript">output_list['ft54.1'] = '\nRunning test case in theme: LIST\nLogged in as seleniumTestAdmin\nStarting test for UNLOGGED USER\nClicking first video on the page...\nChecking that input fields to post a comment are not on the page...\nStarting test for LOGGED USER\nLogging in as User...\nLogged in as seleniumTestUser\nClicking on the first video on the page...\nGenerating and posting a new comment...\nAsserting the comment is on the page...\nGoing back on main page...\nLogging out...\nStarting test for ADMIN\nLogging in as admin...\nLogged in as seleniumTestAdmin\nClicking first video on the page...\nGenerating and posting new comment...\nAsserting comment is on the page...\nDeleting comment posted by logged user...\nDeleting comment posted by Admin...\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_comments.py\", line 577, in test_case\n    self.AdminTest()\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_comments.py\", line 509, in LoggedAsAdmin_CommentPosted\n    sel.click(self.themeToTest.deleteCommentButtonPart1 + self.comment +self.themeToTest.deleteCommentButtonPart2)\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 284, in click\n    self.do_command(\"click\", [locator,])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 215, in do_command\n    raise Exception, data\nException: ERROR: Element //li[contains(.,\'Test comment:_9h29m25sec_21/7/2010\')]/div/div/form[button=\'delete\']/button not found\n';</script>
 </td>
 </tr>
 
@@ -1085,28 +1085,28 @@ function showOutput(id, name) {
 </td>
 </tr>
 
-<tr class='errorClass'>
+<tr class='failClass'>
     <td>testcases_comments.testcase_Comments_ModerationRequired_LoginRequired</td>
     <td>1</td>
     <td>0</td>
-    <td>0</td>
     <td>1</td>
+    <td>0</td>
     <td><a href="javascript:showClassDetail('c56',1)">Detail</a></td>
 </tr>
 
 <tr id='ft56.1' class='none'>
-    <td class='errorCase'><div class='testcase'>test_case</div></td>
-    <td colspan='5' align='center'><a href="javascript:showOutput('ft56.1', 'test_case')">error</a>
-<script language="javascript" type="text/javascript">output_list['ft56.1'] = '\nRunning test case in theme: LIST\nLogged in as seleniumTestAdmin\nStarting test for UNLOGGED USER\nClicking first video on the page...\nChecking that input fields to post a comment are not on the page...\nStarting test for LOGGED USER\nLogging in as User...\nLogged in as seleniumTestUser\nClicking on the first video on the page...\nGenerating and posting new comment...\nWaiting for notification that comment was sent to moderators...\nText \" Your comment has been sent to the moderators. \" is on the page\nLogging out...\nLogging in as Admin...\nLogged in as seleniumTestAdmin\nOpening settings and approving a previously posted comment...\nGoing back on the main page...\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_comments.py\", line 574, in test_case\n    self.UserTest()\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_comments.py\", line 423, in LoggedAsUser_ModerationRequired\n    sel.click(\'link=View Main Site\')\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 284, in click\n    self.do_command(\"click\", [locator,])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 215, in do_command\n    raise Exception, data\nException: ERROR: Element link=View Main Site not found\n';</script>
+    <td class='failCase'><div class='testcase'>test_case</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft56.1', 'test_case')">fail</a>
+<script language="javascript" type="text/javascript">output_list['ft56.1'] = 'ERROR: Additional Settings could not be changed\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_comments.py\", line 546, in test_case\n    self.ChangeSiteSettings()\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_comments.py\", line 534, in ChangeSiteSettings\n    self.failIf(True)\nAssertionError\n';</script>
 </td>
 </tr>
 
 <tr id='total_row'>
     <td>Total</td>
     <td>60</td>
-    <td>21</td>
+    <td>24</td>
     <td>1</td>
-    <td>38</td>
+    <td>35</td>
     <td>&nbsp;</td>
 </tr>
 </table>
