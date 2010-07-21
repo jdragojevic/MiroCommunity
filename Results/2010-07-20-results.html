@@ -1,0 +1,1094 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Miro Community Test Suite</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.1"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { }
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: medium solid #777;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#result_table td {
+    border: thin solid #777;
+    padding: 2px;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #6c6; }
+.failClass  { background-color: #c60; }
+.errorClass { background-color: #c00; }
+.passCase   { color: #6c6; }
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+</style>
+
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+--></script>
+
+<div class='heading'>
+<h1>Miro Community Test Suite</h1>
+<p class='attribute'><strong>Start Time:</strong> 2010-07-20 10:42:13</p>
+<p class='attribute'><strong>Duration:</strong> 1:13:54.085714</p>
+<p class='attribute'><strong>Status:</strong> Pass 23 Failure 3 Error 32</p>
+
+<p class='description'>Results of test run</p>
+</div>
+
+
+
+<p id='show_detail_line'>Show
+<a href='javascript:showCase(0)'>Summary</a>
+<a href='javascript:showCase(1)'>Failed</a>
+<a href='javascript:showCase(2)'>All</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>Test Group/Test case</td>
+    <td>Count</td>
+    <td>Pass</td>
+    <td>Fail</td>
+    <td>Error</td>
+    <td>View</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>testcases_users.TestCase_AddNewAdmin</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c1',1)">Detail</a></td>
+</tr>
+
+<tr id='ft1.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_AddNewAdmin</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft1.1', 'test_AddNewAdmin')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft1.1'] = 'Logged in as seleniumTestAdmin\nDuplicate user found. Deleting it...\nUser deleted: vitalii1\nAdding a new username vitalii1\nUser added to the list\nLogging out...\nLogging in as user: vitalii1\nLogged in as vitalii1\n********ERROR: Log in user vitalii1 as Admin fail\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_users.py\", line 70, in tearDown\n    self.assertEqual([], self.verificationErrors)\nAssertionError: [] != [\'Log in user vitalii1 as Admin fail\']\n';</script>
+</td>
+</tr>
+
+<tr class='passClass'>
+    <td>testcases_users.TestCase_AddNewUser</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c2',1)">Detail</a></td>
+</tr>
+
+<tr id='pt2.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_AddNewUser</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('pt2.1', 'test_AddNewUser')">pass</a>
+<script language="javascript" type="text/javascript">output_list['pt2.1'] = 'Logged in as seleniumTestAdmin\nDuplicate user found. Deleting it...\nUser deleted: vitalii\nAdding a new username vitalii\nUser added to the list\nLogging out...\nLogging in as user: vitalii\nLogged in as vitalii\nLogged as User\n';</script>
+</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>testcases_users.TestCase_EditUser</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c3',1)">Detail</a></td>
+</tr>
+
+<tr id='ft3.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_EditUser</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft3.1', 'test_EditUser')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft3.1'] = 'Logged in as seleniumTestAdmin\nUser finded start to edit\nStart to edit field\nUser vitalii4 edited\nLogging in as user: vitalii4\nLogged in as vitalii4\n********ERROR: Log in user vitalii4 as Admin fail\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_users.py\", line 165, in tearDown\n    self.assertEqual([], self.verificationErrors)\nAssertionError: [] != [\'Log in user vitalii4 as Admin fail\']\n';</script>
+</td>
+</tr>
+
+<tr class='passClass'>
+    <td>testcases_users.TestCase_DeleteUser</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c4',1)">Detail</a></td>
+</tr>
+
+<tr id='pt4.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_DeleteUser</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('pt4.1', 'test_DeleteUser')">pass</a>
+<script language="javascript" type="text/javascript">output_list['pt4.1'] = 'Logged in as seleniumTestAdmin\nAdding user: vitalii5\nAdding a new username vitalii5\nUser added to the list\nDeleting user: vitalii5\nUser vitalii5 deleted.\nLogging out...\nLogging in as user: vitalii5\nLogin fail\n';</script>
+</td>
+</tr>
+
+<tr class='passClass'>
+    <td>testcases_users.TestCase_CreateNewUserUsernameAndPassword</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c5',1)">Detail</a></td>
+</tr>
+
+<tr id='pt5.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_CreateNewUserUsernameAndPassword</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('pt5.1', 'test_CreateNewUserUsernameAndPassword')">pass</a>
+<script language="javascript" type="text/javascript">output_list['pt5.1'] = 'Logged in as seleniumTestAdmin\nDuplicate user found. Deleting it...\nUser deleted: vitalii\nAdding a new username vitalii\nUser added to the list\nLogging out...\nLogging in as user: vitalii\nLogged in as vitalii\n';</script>
+</td>
+</tr>
+
+<tr class='passClass'>
+    <td>testcases_users.TestCase_CreateNewUserWithoutUsername</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c6',1)">Detail</a></td>
+</tr>
+
+<tr id='pt6.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_CreateNewUserWithoutUsername</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('pt6.1', 'test_CreateNewUserWithoutUsername')">pass</a>
+<script language="javascript" type="text/javascript">output_list['pt6.1'] = 'Logged in as seleniumTestAdmin\nAdding a new username \n********ERROR: user was not added to the list\nUsername edit field mandatory, create user fail\n';</script>
+</td>
+</tr>
+
+<tr class='passClass'>
+    <td>testcases_users.TestCase_CreateNewUserWithoutPassword</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c7',1)">Detail</a></td>
+</tr>
+
+<tr id='pt7.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_CreateNewUserWithoutPassword</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('pt7.1', 'test_CreateNewUserWithoutPassword')">pass</a>
+<script language="javascript" type="text/javascript">output_list['pt7.1'] = 'Logged in as seleniumTestAdmin\nAdding a new username vitalii2\n********ERROR: vitalii2user was not added to the list\nPassword edit field mandatory, create user fail\n';</script>
+</td>
+</tr>
+
+<tr class='passClass'>
+    <td>testcases_users.TestCase_UsernameDoesntAcceptMax1Chars</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c8',1)">Detail</a></td>
+</tr>
+
+<tr id='pt8.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_UsernameDoesntAcceptMax1Chars</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('pt8.1', 'test_UsernameDoesntAcceptMax1Chars')">pass</a>
+<script language="javascript" type="text/javascript">output_list['pt8.1'] = 'Logged in as seleniumTestAdmin\nAdding user: 1234567890123456789012345678901\nAdding a new username 1234567890123456789012345678901\n********ERROR: 1234567890123456789012345678901user was not added to the list\n';</script>
+</td>
+</tr>
+
+<tr class='passClass'>
+    <td>testcases_users.TestCase_NewUserUsernameMaxMax2MinChars</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c9',1)">Detail</a></td>
+</tr>
+
+<tr id='pt9.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_NewUserUsernameMaxMax2MinChars</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('pt9.1', 'test_NewUserUsernameMaxMax2MinChars')">pass</a>
+<script language="javascript" type="text/javascript">output_list['pt9.1'] = 'Logged in as seleniumTestAdmin\nDuplicate user found. Deleting it...\nUser deleted: 123456789012345678901234567890\nAdding a new username 123456789012345678901234567890\nUser added to the list\nLogging out...\nLogging in as user: 123456789012345678901234567890\nLogged in as 123456789012345678901234567890\nLogged in as seleniumTestAdmin\nDuplicate user found. Deleting it...\nUser deleted: 123456789012345\nAdding a new username 123456789012345\nUser added to the list\nLogging out...\nLogging in as user: 123456789012345\nLogged in as 123456789012345\nLogged in as seleniumTestAdmin\nDuplicate user found. Deleting it...\nUser deleted: 1\nAdding a new username 1\nUser added to the list\nLogging out...\nLogging in as user: 1\nLogged in as 1\n';</script>
+</td>
+</tr>
+
+<tr class='passClass'>
+    <td>testcases_users.TestCase_EditUserProfile</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c10',1)">Detail</a></td>
+</tr>
+
+<tr id='pt10.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_EditUserProfile</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('pt10.1', 'test_EditUserProfile')">pass</a>
+<script language="javascript" type="text/javascript">output_list['pt10.1'] = 'Logged in as seleniumTestAdmin\nDuplicate user found. Deleting it...\nUser deleted: vitalii\nAdding a new username vitalii\nUser added to the list\nLogging out...\nLog in as created user\nLogged in as vitalii\nStarting edit profile vitalii\nView profile location successful\nView profile website successful\n';</script>
+</td>
+</tr>
+
+<tr class='passClass'>
+    <td>testcases_users.TestCase_ViewUser</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c11',1)">Detail</a></td>
+</tr>
+
+<tr id='pt11.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_ViewUser</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('pt11.1', 'test_ViewUser')">pass</a>
+<script language="javascript" type="text/javascript">output_list['pt11.1'] = 'Logged in as seleniumTestAdmin\nUser finded, view user\n';</script>
+</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>testcases_customize.TestCase_ChangeSiteSettings</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c12',1)">Detail</a></td>
+</tr>
+
+<tr id='ft12.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_ChangeSiteSettings</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft12.1', 'test_ChangeSiteSettings')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft12.1'] = 'Logged in as seleniumTestAdmin\n\nRunning ChangeSiteSettings test... with theme No.1\nChanged site title, tagline, about text\nChecked title, tagline in administrator interface\n********ERROR: Footer is not present on the Main site\nChecked title, tagline, footer on the front end\nChecked title, about text on About page\n\nRunning ChangeSiteSettings test... with theme No.2\nChanged site title, tagline, about text\nChecked title, tagline in administrator interface\n********ERROR: Footer is not present on the Main site\nChecked title, tagline, footer on the front end\nChecked title, about text on About page\n\nRunning ChangeSiteSettings test... with theme No.3\nChanged site title, tagline, about text\nChecked title, tagline in administrator interface\n********ERROR: Footer is not present on the Main site\nChecked title, tagline, footer on the front end\nChecked title, about text on About page\n\nRunning ChangeSiteSettings test... with theme No.4\nChanged site title, tagline, about text\nChecked title, tagline in administrator interface\nChecked title, tagline, footer on the front end\nChecked title, about text on About page\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_customize.py\", line 53, in tearDown\n    self.assertEqual([], self.verificationErrors)\nAssertionError: [] != [\'Footer is not present on the Main site\', \'Footer is not present on the Main site\', \'Footer is not present on the Main site\']\n';</script>
+</td>
+</tr>
+
+<tr class='passClass'>
+    <td>testcases_customize.TestCase_ChangeOrganization</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c13',1)">Detail</a></td>
+</tr>
+
+<tr id='pt13.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_ChangeOrganizationSettings</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('pt13.1', 'test_ChangeOrganizationSettings')">pass</a>
+<script language="javascript" type="text/javascript">output_list['pt13.1'] = 'Logged in as seleniumTestAdmin\nRunning ChangeOrganizationSettings test... with theme No.1\nChanged organization settings (SideBarBlurb, FooterBlurb)\nRunning ChangeOrganizationSettings test... with theme No.2\nChanged organization settings (SideBarBlurb, FooterBlurb)\nRunning ChangeOrganizationSettings test... with theme No.3\nChanged organization settings (SideBarBlurb, FooterBlurb)\nRunning ChangeOrganizationSettings test... with theme No.4\nChanged organization settings (SideBarBlurb, FooterBlurb)\n';</script>
+</td>
+</tr>
+
+<tr class='passClass'>
+    <td>testcases_customize.TestCase_UploadLogo</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c14',1)">Detail</a></td>
+</tr>
+
+<tr id='pt14.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_UploadLogo</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('pt14.1', 'test_UploadLogo')">pass</a>
+<script language="javascript" type="text/javascript">output_list['pt14.1'] = 'Logged in as seleniumTestAdmin\n\nRunning UploadLogo test... with theme No.1\nUploading file: dalmatia1.jpg\n**** DEBUG: filename: /home/jed/RC-testing/MiroCommunity/TestInput/dalmatia1.jpg\nChecking site logo image on admin page\nChecking site logo image on Home page\nChecking site logo image on About page\nUploading file: dalmatia2.jpg\n**** DEBUG: filename: /home/jed/RC-testing/MiroCommunity/TestInput/dalmatia2.jpg\nChecking site logo image on admin page\nChecking site logo image on Home page\nChecking site logo image on About page\n\nRunning UploadLogo test... with theme No.2\nUploading file: dalmatia1.jpg\n**** DEBUG: filename: /home/jed/RC-testing/MiroCommunity/TestInput/dalmatia1.jpg\nChecking site logo image on admin page\nChecking site logo image on Home page\nChecking site logo image on About page\nUploading file: dalmatia2.jpg\n**** DEBUG: filename: /home/jed/RC-testing/MiroCommunity/TestInput/dalmatia2.jpg\nChecking site logo image on admin page\nChecking site logo image on Home page\nChecking site logo image on About page\n\nRunning UploadLogo test... with theme No.3\nUploading file: dalmatia1.jpg\n**** DEBUG: filename: /home/jed/RC-testing/MiroCommunity/TestInput/dalmatia1.jpg\nChecking site logo image on admin page\nChecking site logo image on Home page\nChecking site logo image on About page\nUploading file: dalmatia2.jpg\n**** DEBUG: filename: /home/jed/RC-testing/MiroCommunity/TestInput/dalmatia2.jpg\nChecking site logo image on admin page\nChecking site logo image on Home page\nChecking site logo image on About page\n\nRunning UploadLogo test... with theme No.4\nUploading file: dalmatia1.jpg\n**** DEBUG: filename: /home/jed/RC-testing/MiroCommunity/TestInput/dalmatia1.jpg\nChecking site logo image on admin page\nChecking site logo image on Home page\nChecking site logo image on About page\nUploading file: dalmatia2.jpg\n**** DEBUG: filename: /home/jed/RC-testing/MiroCommunity/TestInput/dalmatia2.jpg\nChecking site logo image on admin page\nChecking site logo image on Home page\nChecking site logo image on About page\n';</script>
+</td>
+</tr>
+
+<tr class='passClass'>
+    <td>testcases_customize.TestCase_UploadBackground</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c15',1)">Detail</a></td>
+</tr>
+
+<tr id='pt15.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_UploadBackground</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('pt15.1', 'test_UploadBackground')">pass</a>
+<script language="javascript" type="text/javascript">output_list['pt15.1'] = 'Logged in as seleniumTestAdmin\n\nRunning UploadBackground test... with theme No.1\nUploading file: background5.jpg\nUploading a new background image...background5.jpg\n**** DEBUG: filename: /home/jed/RC-testing/MiroCommunity/TestInput/background5.jpg\nChecking background image on Home page\n\nRunning UploadBackground test... with theme No.2\nUploading file: background5.jpg\nUploading a new background image...background5.jpg\n**** DEBUG: filename: /home/jed/RC-testing/MiroCommunity/TestInput/background5.jpg\nChecking background image on Home page\n\nRunning UploadBackground test... with theme No.3\nUploading file: background5.jpg\nUploading a new background image...background5.jpg\n**** DEBUG: filename: /home/jed/RC-testing/MiroCommunity/TestInput/background5.jpg\nChecking background image on Home page\n\nRunning UploadBackground test... with theme No.4\nUploading file: background5.jpg\nUploading a new background image...background5.jpg\n**** DEBUG: filename: /home/jed/RC-testing/MiroCommunity/TestInput/background5.jpg\nChecking background image on Home page\n';</script>
+</td>
+</tr>
+
+<tr class='passClass'>
+    <td>testcases_customize.TestCase_DeleteBackground</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c16',1)">Detail</a></td>
+</tr>
+
+<tr id='pt16.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_DeleteBackground</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('pt16.1', 'test_DeleteBackground')">pass</a>
+<script language="javascript" type="text/javascript">output_list['pt16.1'] = 'Logged in as seleniumTestAdmin\n\nRunning DeleteBackground test...\nDeleting background...\nChecking that Home page does not have a background image\nBackground image was successfully deleted\n';</script>
+</td>
+</tr>
+
+<tr class='passClass'>
+    <td>testcases_customize.TestCase_AddCustomCSS</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c17',1)">Detail</a></td>
+</tr>
+
+<tr id='pt17.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_AddCustomCSS</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('pt17.1', 'test_AddCustomCSS')">pass</a>
+<script language="javascript" type="text/javascript">output_list['pt17.1'] = 'Logged in as seleniumTestAdmin\n\nRunning AddCustomCSS test...\nAdding CSS: body\n{\nbackground-color:#d0e4fe;\n}\nh1\n{\ncolor:orange;\ntext-align:center;\n}\np\n{\nfont-family:\"Times New Roman\";\nfont-size:20px;\n}\nAdding custom CSS...\nChecking that admin page does not have custom CSS\nCustom CSS did not add to admin pages - PASS\nChecking that Home page has custom CSS\nCustom CSS was successfully added to front pages\nDeleting custom CSS\nDeleting custom CSS...\nChecking that Home page does not have custom CSS\nCustom CSS was successfully removed from front pages\n';</script>
+</td>
+</tr>
+
+<tr class='passClass'>
+    <td>testcases_customize.TestCase_DisplaySubmitVideo</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c18',1)">Detail</a></td>
+</tr>
+
+<tr id='pt18.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_DisplaySubmitVideo</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('pt18.1', 'test_DisplaySubmitVideo')">pass</a>
+<script language="javascript" type="text/javascript">output_list['pt18.1'] = 'Logged in as seleniumTestAdmin\n\nRunning DisplaySubmitVideo test... with theme No.1\nChecking Display \'Submit a Video\' check box...\nSubmit a Video button successfully found on front pages\nUnchecking Display \'Submit a Video\' check box...\nSubmit a Video button not found on front pages - PASS\n\nRunning DisplaySubmitVideo test... with theme No.2\nChecking Display \'Submit a Video\' check box...\nSubmit a Video button successfully found on front pages\nUnchecking Display \'Submit a Video\' check box...\nSubmit a Video button not found on front pages - PASS\n\nRunning DisplaySubmitVideo test... with theme No.3\nChecking Display \'Submit a Video\' check box...\nSubmit a Video button successfully found on front pages\nUnchecking Display \'Submit a Video\' check box...\nSubmit a Video button not found on front pages - PASS\n\nRunning DisplaySubmitVideo test... with theme No.4\nChecking Display \'Submit a Video\' check box...\nSubmit a Video button successfully found on front pages\nUnchecking Display \'Submit a Video\' check box...\nSubmit a Video button not found on front pages - PASS\n';</script>
+</td>
+</tr>
+
+<tr class='passClass'>
+    <td>testcases_categories.TestCase_DeleteAllCategories</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c19',1)">Detail</a></td>
+</tr>
+
+<tr id='pt19.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_DeleteAllCategories</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('pt19.1', 'test_DeleteAllCategories')">pass</a>
+<script language="javascript" type="text/javascript">output_list['pt19.1'] = 'Logged in as seleniumTestAdmin\nRetrieving the current list of categories...\nMemorized the existing list of categories:\n[[u\'a very long category for testing purposes which should get truncated\', u\'\', u\'a-very-long-category-for-testing-purposes\'], [u\'a-feminist-view\', u\'a-feminist-view is the description of this item\', u\'a-feminist-view\'], [u\'art\', u\'art is the description of this item\', u\'art\'], [u\'art1\', u\'\', u\'art1\'], [u\'books\', u\'books is the description of this item\', u\'books\'], [u\'BulkEditTestCategory\', u\'\', u\'BulkEditTestCategory\'], [u\'desoxyribonukleins\\xe4ure\', u\'\', u\'desoxyribonukleinsaure\'], [u\'divlja ru\\u017ea\', u\'divlja ru\\u017ea is the description of this item\', u\'divlja-ruza\'], [u\'Eyafyallayokull\', u\'\', u\'eyafyallayokull\'], [u\'film\', u\'film is the description of this item\', u\'film\'], [u\'\\u2014action\', u\'action films\', u\'action\'], [u\'\\u2014children\', u\'children films\', u\'children\'], [u\'\\u2014comedy\', u\'comedy films\', u\'comedy\'], [u\'\\u2014drama\', u\'drama films\', u\'drama\'], [u\'\\u2014family\', u\'family films\', u\'family\'], [u\'\\u2014horror\', u\'horror films\', u\'horror\'], [u\'food\', u\'food is the description of this item\', u\'food\'], [u\'pasja dra\\u010da\', u\'pasja dra\\u010da is the description of this item\', u\'pasja-draca\'], [u\'pasja-ru\\u017ea\', u\'pasja-ru\\u017ea is the description of this item\', u\'pasja-ruza\'], [u\'\\u0161ipak\', u\'\\u0161ipak is the description of this item\', u\'sipak\'], [u\'\\u044f\\u0431\\u043b\\u043e\\u043a\\u043e\', u\'\\u044f\\u0431\\u043b\\u043e\\u043a\\u043e is the description of this item\', u\'yabloko\']]\nDeleted all the categories\n';</script>
+</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>testcases_categories.TestCase_AddCategories</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c20',1)">Detail</a></td>
+</tr>
+
+<tr id='ft20.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_AddCategories</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft20.1', 'test_AddCategories')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft20.1'] = 'Logged in as seleniumTestAdmin\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_categories.py\", line 63, in test_AddCategories\n    categories.AddCategory(self, sel, item, item, \"\", 0, \"\")\n  File \"/home/jed/RC-testing/MiroCommunity/categories.py\", line 140, in AddCategory\n    if CategoryRow(self,sel,testCat)!=0:\n  File \"/home/jed/RC-testing/MiroCommunity/categories.py\", line 42, in CategoryRow\n    sel.open(testvars.MCTestVariables[\"CategoriesPage\"])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 764, in open\n    self.do_command(\"open\", [url,])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 215, in do_command\n    raise Exception, data\nException: XHR ERROR: URL = http://dalmatia.mirocommunity.org/admin/categories Response_Code = 500 Error_Message = Internal Server Error\n';</script>
+</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>testcases_categories.TestCase_AddSubCategories</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c21',1)">Detail</a></td>
+</tr>
+
+<tr id='ft21.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_AddSubCategories</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft21.1', 'test_AddSubCategories')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft21.1'] = 'Logged in as seleniumTestAdmin\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_categories.py\", line 86, in test_AddSubCategories\n    categories.AddCategory(self, sel, item, item, item+\" films\", 1, \"film\")\n  File \"/home/jed/RC-testing/MiroCommunity/categories.py\", line 131, in AddCategory\n    if CategoryRow(self,sel,parent)==0:\n  File \"/home/jed/RC-testing/MiroCommunity/categories.py\", line 42, in CategoryRow\n    sel.open(testvars.MCTestVariables[\"CategoriesPage\"])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 764, in open\n    self.do_command(\"open\", [url,])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 215, in do_command\n    raise Exception, data\nException: XHR ERROR: URL = http://dalmatia.mirocommunity.org/admin/categories Response_Code = 500 Error_Message = Internal Server Error\n';</script>
+</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>testcases_categories.TestCase_AddNonASCIICategories</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c22',1)">Detail</a></td>
+</tr>
+
+<tr id='ft22.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_AddNonASCIICategories</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft22.1', 'test_AddNonASCIICategories')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft22.1'] = 'Logged in as seleniumTestAdmin\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_categories.py\", line 108, in test_AddNonASCIICategories\n    categories.AddCategory(self, sel, item[0], item[1], \"\", 0, \"\")\n  File \"/home/jed/RC-testing/MiroCommunity/categories.py\", line 140, in AddCategory\n    if CategoryRow(self,sel,testCat)!=0:\n  File \"/home/jed/RC-testing/MiroCommunity/categories.py\", line 42, in CategoryRow\n    sel.open(testvars.MCTestVariables[\"CategoriesPage\"])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 764, in open\n    self.do_command(\"open\", [url,])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 215, in do_command\n    raise Exception, data\nException: XHR ERROR: URL = http://dalmatia.mirocommunity.org/admin/categories Response_Code = 500 Error_Message = Internal Server Error\n';</script>
+</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>testcases_categories.TestCase_AddDuplicateCategory</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c23',1)">Detail</a></td>
+</tr>
+
+<tr id='ft23.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_AddDuplicateCategory</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft23.1', 'test_AddDuplicateCategory')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft23.1'] = 'Logged in as seleniumTestAdmin\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_categories.py\", line 131, in test_AddDuplicateCategory\n    categories.AddDuplicateCategory(self,sel,\"art\",\"\")\n  File \"/home/jed/RC-testing/MiroCommunity/categories.py\", line 240, in AddDuplicateCategory\n    if CategoryRow(self,sel,cat)==0:\n  File \"/home/jed/RC-testing/MiroCommunity/categories.py\", line 42, in CategoryRow\n    sel.open(testvars.MCTestVariables[\"CategoriesPage\"])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 764, in open\n    self.do_command(\"open\", [url,])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 215, in do_command\n    raise Exception, data\nException: XHR ERROR: URL = http://dalmatia.mirocommunity.org/admin/categories Response_Code = 500 Error_Message = Internal Server Error\n';</script>
+</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>testcases_categories.TestCase_EditCategory</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c24',1)">Detail</a></td>
+</tr>
+
+<tr id='ft24.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_EditCategory</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft24.1', 'test_EditCategory')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft24.1'] = 'Logged in as seleniumTestAdmin\nUpdating category: food\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_categories.py\", line 157, in test_EditCategory\n    categories.EditCategory(self,sel,initcat,cat,\"\",desc,\"fish_logo.gif\")\n  File \"/home/jed/RC-testing/MiroCommunity/categories.py\", line 380, in EditCategory\n    catRow = CategoryRow(self,sel,cat)\n  File \"/home/jed/RC-testing/MiroCommunity/categories.py\", line 42, in CategoryRow\n    sel.open(testvars.MCTestVariables[\"CategoriesPage\"])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 764, in open\n    self.do_command(\"open\", [url,])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 215, in do_command\n    raise Exception, data\nException: XHR ERROR: URL = http://dalmatia.mirocommunity.org/admin/categories Response_Code = 500 Error_Message = Internal Server Error\n';</script>
+</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>testcases_categories.TestCase_BulkDeleteCategories</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c25',1)">Detail</a></td>
+</tr>
+
+<tr id='ft25.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_BulkDeleteCategories</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft25.1', 'test_BulkDeleteCategories')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft25.1'] = 'Logged in as seleniumTestAdmin\nDeleting the following categories with the use of bulk action:\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_categories.py\", line 225, in test_BulkDeleteCategories\n    categories.BulkDeleteCategories(self,sel,newList)\n  File \"/home/jed/RC-testing/MiroCommunity/categories.py\", line 339, in BulkDeleteCategories\n    sel.open(testvars.MCTestVariables[\"CategoriesPage\"])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 764, in open\n    self.do_command(\"open\", [url,])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 215, in do_command\n    raise Exception, data\nException: XHR ERROR: URL = http://dalmatia.mirocommunity.org/admin/categories Response_Code = 500 Error_Message = Internal Server Error\n';</script>
+</td>
+</tr>
+
+<tr class='failClass'>
+    <td>testcases_manage.TestCase_AddSourceFeed</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c26',1)">Detail</a></td>
+</tr>
+
+<tr id='ft26.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_AddSourceFeed</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft26.1', 'test_AddSourceFeed')">fail</a>
+<script language="javascript" type="text/javascript">output_list['ft26.1'] = 'Logged in as seleniumTestAdmin\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_manage.py\", line 47, in test_AddSourceFeed\n    sources.AddSource(self,sel,\"http://feeds2.feedburner.com/video/artsworld\",1,\"art\",\"Selene Test-Admin\")\n  File \"/home/jed/RC-testing/MiroCommunity/sources.py\", line 336, in AddSource\n    NavigateToManageSources(self,sel)\n  File \"/home/jed/RC-testing/MiroCommunity/sources.py\", line 67, in NavigateToManageSources\n    self.fail(\"Not logged in as an Administrator\")\nAssertionError: Not logged in as an Administrator\n';</script>
+</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>testcases_manage.TestCase_AddDuplicateFeed</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c27',1)">Detail</a></td>
+</tr>
+
+<tr id='ft27.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_AddDuplicateFeed</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft27.1', 'test_AddDuplicateFeed')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft27.1'] = 'Logged in as seleniumTestAdmin\nChecking for the alert message about feed duplication...\n********ERROR: Alert message about feed duplication was not found\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_manage.py\", line 74, in tearDown\n    self.assertEqual([], self.verificationErrors)\nAssertionError: [] != [\'Alert message about feed duplication was not found\']\n';</script>
+</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>testcases_manage.TestCase_AddSourceWithDuplicateVideos</td>
+    <td>2</td>
+    <td>0</td>
+    <td>0</td>
+    <td>2</td>
+    <td><a href="javascript:showClassDetail('c28',2)">Detail</a></td>
+</tr>
+
+<tr id='ft28.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_AddSourceWithDuplicateVideos</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft28.1', 'test_AddSourceWithDuplicateVideos')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft28.1'] = 'Logged in as seleniumTestAdmin\nDeleting source Yahoo Media TEST...\nConfirming deletion...\nSuccessfully deleted source: Yahoo Media TEST\n********ERROR: Feed name is not displayed at Review Feed page\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_manage.py\", line 94, in test_AddSourceWithDuplicateVideos\n    sources.AddSource(self,sel,\"http://participatoryculture.org/feeds_test/feed1.rss\",1,\"\",\"\")\n  File \"/home/jed/RC-testing/MiroCommunity/sources.py\", line 365, in AddSource\n    print \"Pre-import estimate: \"+sel.get_text(\"//div[@id=\'content\']/form/div[1]/div/span\")\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 1189, in get_text\n    return self.get_string(\"getText\", [locator,])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 219, in get_string\n    result = self.do_command(verb, args)\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 215, in do_command\n    raise Exception, data\nException: ERROR: Element //div[@id=\'content\']/form/div[1]/div/span not found\n';</script>
+</td>
+</tr>
+
+<tr id='ft28.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_AddSourceWithDuplicateVideos</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft28.2', 'test_AddSourceWithDuplicateVideos')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft28.2'] = 'Logged in as seleniumTestAdmin\nDeleting source Yahoo Media TEST...\nConfirming deletion...\nSuccessfully deleted source: Yahoo Media TEST\n********ERROR: Feed name is not displayed at Review Feed page\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_manage.py\", line 122, in tearDown\n    self.assertEqual([], self.verificationErrors)\nAssertionError: [] != [\'Feed name is not displayed at Review Feed page\']\n';</script>
+</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>testcases_manage.TestCase_EditSource</td>
+    <td>2</td>
+    <td>0</td>
+    <td>0</td>
+    <td>2</td>
+    <td><a href="javascript:showClassDetail('c29',2)">Detail</a></td>
+</tr>
+
+<tr id='ft29.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_EditSource</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft29.1', 'test_EditSource')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft29.1'] = 'Logged in as seleniumTestAdmin\nAl Jazeera Arts World - Video feed not found - adding it...\n********ERROR: Feed name is not displayed at Review Feed page\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_manage.py\", line 143, in test_EditSource\n    sources.AddSource(self,sel,\"http://feeds2.feedburner.com/video/artsworld\",0,\"\",\"\")\n  File \"/home/jed/RC-testing/MiroCommunity/sources.py\", line 365, in AddSource\n    print \"Pre-import estimate: \"+sel.get_text(\"//div[@id=\'content\']/form/div[1]/div/span\")\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 1189, in get_text\n    return self.get_string(\"getText\", [locator,])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 219, in get_string\n    result = self.do_command(verb, args)\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 215, in do_command\n    raise Exception, data\nException: ERROR: Element //div[@id=\'content\']/form/div[1]/div/span not found\n';</script>
+</td>
+</tr>
+
+<tr id='ft29.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_EditSource</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft29.2', 'test_EditSource')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft29.2'] = 'Logged in as seleniumTestAdmin\nAl Jazeera Arts World - Video feed not found - adding it...\n********ERROR: Feed name is not displayed at Review Feed page\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_manage.py\", line 161, in tearDown\n    self.assertEqual([], self.verificationErrors)\nAssertionError: [] != [\'Feed name is not displayed at Review Feed page\']\n';</script>
+</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>testcases_manage.TestCase_BulkEditSources</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c30',1)">Detail</a></td>
+</tr>
+
+<tr id='ft30.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_BulkEditSources</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft30.1', 'test_BulkEditSources')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft30.1'] = 'Logged in as seleniumTestAdmin\nRetrieving the current list of sources...\n[u\'23andMe\', u\'Aaron Ekroth\', u\'Aslann\', u\'Best of Attenborough\', u\'capsuspensionbridge\', u\'chuckf38\', u\'Croatia\', u\'Dalmatian resorts\', u\'dapperQ\', u\'Doug Thompson\', u\'edinburgh\', u\'Gunther Machu\', u\'highcrofttv\', u\'Maxiedude13\', u\'MSNBC Rachel Maddow (video)\', u\'My Wildlife Wonders\', u\'Nainesh\', u\'Natural History\', u\'renault\', u\'TELUSWorldofScience\', u\'universityofbc\', u\'volcanoes\', u\'whale watching\']\n[u\'dapperQ\', u\'Doug Thompson\']\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_manage.py\", line 185, in test_BulkEditSources\n    if categories.CategoryRow(self,sel,newcat)==0:\n  File \"/home/jed/RC-testing/MiroCommunity/categories.py\", line 42, in CategoryRow\n    sel.open(testvars.MCTestVariables[\"CategoriesPage\"])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 764, in open\n    self.do_command(\"open\", [url,])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 215, in do_command\n    raise Exception, data\nException: XHR ERROR: URL = http://dalmatia.mirocommunity.org/admin/categories Response_Code = 500 Error_Message = Internal Server Error\n';</script>
+</td>
+</tr>
+
+<tr class='passClass'>
+    <td>testcases_manage.TestCase_BulkDeleteSources</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c31',1)">Detail</a></td>
+</tr>
+
+<tr id='pt31.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_BulkDeleteSources</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('pt31.1', 'test_BulkDeleteSources')">pass</a>
+<script language="javascript" type="text/javascript">output_list['pt31.1'] = 'Logged in as seleniumTestAdmin\nRetrieving the current list of sources...\nFull list of available sources:\n[u\'23andMe\', u\'Aaron Ekroth\', u\'Aslann\', u\'Best of Attenborough\', u\'capsuspensionbridge\', u\'chuckf38\', u\'Croatia\', u\'Dalmatian resorts\', u\'dapperQ\', u\'Doug Thompson\', u\'edinburgh\', u\'Gunther Machu\', u\'highcrofttv\', u\'Maxiedude13\', u\'MSNBC Rachel Maddow (video)\', u\'My Wildlife Wonders\', u\'Nainesh\', u\'Natural History\', u\'renault\', u\'TELUSWorldofScience\', u\'universityofbc\', u\'volcanoes\', u\'whale watching\']\nThe following sources will be deleted:\n[u\'capsuspensionbridge\', u\'chuckf38\']\nMarked source: capsuspensionbridge\nMarked source: chuckf38\nDeleting the marked sources...\nChecking source: capsuspensionbridge...\nOK\nChecking source: chuckf38...\nOK\n';</script>
+</td>
+</tr>
+
+<tr class='passClass'>
+    <td>testcases_manage.TestCase_SearchForVideos</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c32',1)">Detail</a></td>
+</tr>
+
+<tr id='pt32.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_SearchForVideos</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('pt32.1', 'test_SearchForVideos')">pass</a>
+<script language="javascript" type="text/javascript">output_list['pt32.1'] = 'Logged in as seleniumTestAdmin\nChecking that \'Search for Video\' button is available\nOK\nLooking for \'Search Video Sites\' pop-up...\nOK\nEntering search criteria...\nSubmitting search criteria...\nChecking the URL of the page with query results...\nhttp://dalmatia.mirocommunity.org/admin/manage/search/?query=tango\nOK\nChecking the title of the page with query results...\nOK\n10 videos found on the first results page\nApproving video \"NEw fixed Blacklight Tango Down Crack Jule 2010\"...\nOK\nFeaturing video \"NEw tutorial how to get Blacklight Tango Down Crack + download link 2010 Jule\"...\nOK\nAdding video \"NEW FIXED CRACK FOR Blacklight Tango Down\" to the queue...\nOK\n \nSearching for the approved video...\nFound Approved video \"NEw fixed Blacklight Tango Down Crack Jule 2010\" in the list of current videos - OK\n \nSearching for the featured video...\nFound Featured video \"NEw tutorial how to get Blacklight Tango Down Crack + download link 2010 Jule\" in the list of current videos - OK\n \nSearching for the video in the queue...\nFound video \"NEW FIXED CRACK FOR Blacklight Tango Down\" in the queue on the last page - OK\n';</script>
+</td>
+</tr>
+
+<tr class='passClass'>
+    <td>testcases_manage.TestCase_SearchVideoByNonASCIITerm</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c33',1)">Detail</a></td>
+</tr>
+
+<tr id='pt33.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_SearchVideoByNonASCIITerm</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('pt33.1', 'test_SearchVideoByNonASCIITerm')">pass</a>
+<script language="javascript" type="text/javascript">output_list['pt33.1'] = 'Logged in as seleniumTestAdmin\nChecking that \'Search for Video\' button is available\nOK\nLooking for \'Search Video Sites\' pop-up...\nOK\nEntering search criteria...\nSubmitting search criteria...\nChecking the URL of the page with query results...\nhttp://dalmatia.mirocommunity.org/admin/manage/search/?query=%D1%82%D1%83%D1%80%D0%B8%D0%B7%D0%BC\nOK\nChecking the title of the page with query results...\nOK\n10 videos found on the first results page\nApproving video \"Bolo Ben из Bar-barians\"...\nOK\nFeaturing video \"Отдых на Ольхоне\"...\nOK\nAdding video \"Туризм и одых в Израиле т+7(499) 346 -2004 т+37257001169\" to the queue...\nOK\n\nSearching for the approved video...\nFound Approved video \"Bolo Ben из Bar-barians\" in the list of current videos - OK\n\nSearching for the featured video...\nFound Featured video \"Отдых на Ольхоне\" in the list of current videos - OK\n\nSearching for the video in the queue...\nFound video \"Туризм и одых в Израиле т+7(499) 346 -2004 т+37257001169\" in the queue on the last page - OK\n';</script>
+</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>testcases_manage.TestCase_AddSearchFeed</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c34',1)">Detail</a></td>
+</tr>
+
+<tr id='ft34.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_AddSearchFeed</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft34.1', 'test_AddSearchFeed')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft34.1'] = 'Logged in as seleniumTestAdmin\nDeleting source Croatia...\nConfirming deletion...\nSuccessfully deleted source: Croatia\nChecking that \'Search for Video\' button is available\nOK\nLooking for \'Search Video Sites\' pop-up...\nOK\nEntering search criteria...\nSubmitting search criteria...\nChecking the URL of the page with query results...\nhttp://dalmatia.mirocommunity.org/admin/manage/search/?query=Croatia\nOK\nChecking the title of the page with query results...\nOK\n10 videos found on the first results page\nSaving search results as a source...\nOK\nLooking for new search feed in the list of sources...\nOK\nChecking source type...\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_manage.py\", line 503, in test_AddSearchFeed\n    sources.AddSearchFeed(self,sel,searchterm,0)\n  File \"/home/jed/RC-testing/MiroCommunity/sources.py\", line 536, in AddSearchFeed\n    sel.open(testvars.MCTestVariables[\"ManageSourcesPage\"]+\"/?page=\"+str(page))\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 764, in open\n    self.do_command(\"open\", [url,])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 215, in do_command\n    raise Exception, data\nException: Timed out after 30000ms\n';</script>
+</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>testcases_manage.TestCase_SortSources</td>
+    <td>2</td>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c35',2)">Detail</a></td>
+</tr>
+
+<tr id='ft35.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_SortSources</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft35.1', 'test_SortSources')">fail</a>
+<script language="javascript" type="text/javascript">output_list['ft35.1'] = 'Logged in as seleniumTestAdmin\n\nSorting the list of sources by NAME in order: Asc...\n********ERROR: Expected link for sorting by NAME ASCENDING not found\nExpected link: ?sort=name__lower\n- Actual link: /admin/manage/\n[u\'whale watching\', u\'volcanoes\', u\'universityofbc\', u\'TELUSWorldofScience\', u\'renault\', u\'Natural History\', u\'Nainesh\', u\'My Wildlife Wonders\', u\'MSNBC Rachel Maddow (video)\', u\'Maxiedude13\', u\'highcrofttv\', u\'Gunther Machu\', u\'edinburgh\', u\'Doug Thompson\', u\'dapperQ\', u\'Dalmatian resorts\', u\'Croatia\', u\'Best of Attenborough\', u\'Aslann\', u\'Aaron Ekroth\', u\'23andMe\']\n********ERROR: Sorting by NAME ASCENDING was incorrect\n\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_manage.py\", line 596, in test_SortSources\n    sources.SortSources(self,sel,\"Name\",\"Desc\")\n  File \"/home/jed/RC-testing/MiroCommunity/sources.py\", line 914, in SortSources\n    NavigateToManageSources(self,sel)\n  File \"/home/jed/RC-testing/MiroCommunity/sources.py\", line 67, in NavigateToManageSources\n    self.fail(\"Not logged in as an Administrator\")\nAssertionError: Not logged in as an Administrator\n';</script>
+</td>
+</tr>
+
+<tr id='ft35.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_SortSources</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft35.2', 'test_SortSources')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft35.2'] = 'Logged in as seleniumTestAdmin\n\nSorting the list of sources by NAME in order: Asc...\n********ERROR: Expected link for sorting by NAME ASCENDING not found\nExpected link: ?sort=name__lower\n- Actual link: /admin/manage/\n[u\'whale watching\', u\'volcanoes\', u\'universityofbc\', u\'TELUSWorldofScience\', u\'renault\', u\'Natural History\', u\'Nainesh\', u\'My Wildlife Wonders\', u\'MSNBC Rachel Maddow (video)\', u\'Maxiedude13\', u\'highcrofttv\', u\'Gunther Machu\', u\'edinburgh\', u\'Doug Thompson\', u\'dapperQ\', u\'Dalmatian resorts\', u\'Croatia\', u\'Best of Attenborough\', u\'Aslann\', u\'Aaron Ekroth\', u\'23andMe\']\n********ERROR: Sorting by NAME ASCENDING was incorrect\n\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_manage.py\", line 649, in tearDown\n    self.assertEqual([], self.verificationErrors)\nAssertionError: [] != [\'Expected link for sorting by NAME ASCENDING not found\', \'Sorting by NAME ASCENDING was incorrect\']\n';</script>
+</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>testcases_manage.TestCase_SearchInSources</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c36',1)">Detail</a></td>
+</tr>
+
+<tr id='ft36.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_SearchInSources</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft36.1', 'test_SearchInSources')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft36.1'] = 'Logged in as seleniumTestAdmin\nSearch 1\nSelecting category: art...\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_manage.py\", line 667, in test_SearchInSources\n    sources.SearchInSources(self,sel,\"art\",\"Selene Test-Admin\",\"Attenborough\")\n  File \"/home/jed/RC-testing/MiroCommunity/sources.py\", line 1008, in SearchInSources\n    sel.select(\"category\",category)\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 703, in select\n    self.do_command(\"select\", [selectLocator,optionLocator,])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 215, in do_command\n    raise Exception, data\nException: ERROR: Option with label \'art\' not found\n';</script>
+</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>testcases_manage.TestCase_FilterSources</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c37',1)">Detail</a></td>
+</tr>
+
+<tr id='ft37.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_FilterSources</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft37.1', 'test_FilterSources')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft37.1'] = 'Logged in as seleniumTestAdmin\nShow All sources\nChecking the URL of the result page...\nOK\n\nShow Video Site Users only\nChecking the URL of the result page...\nOK\nChecking that all videos on the page meet the filter criterion...\nOK\n\nShow Video Site Searches only\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_manage.py\", line 709, in test_FilterSources\n    sources.FilterSources(self,sel,\"Searches\")\n  File \"/home/jed/RC-testing/MiroCommunity/sources.py\", line 1091, in FilterSources\n    NavigateToManageSources(self,sel)\n  File \"/home/jed/RC-testing/MiroCommunity/sources.py\", line 62, in NavigateToManageSources\n    sel.open(testvars.MCTestVariables[\"ManageSourcesPage\"])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 764, in open\n    self.do_command(\"open\", [url,])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 215, in do_command\n    raise Exception, data\nException: Timed out after 30000ms\n';</script>
+</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>testcases_queue.TestCase_ApproveVideo</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c38',1)">Detail</a></td>
+</tr>
+
+<tr id='ft38.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_ApproveVideo</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft38.1', 'test_ApproveVideo')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft38.1'] = 'Logged in as seleniumTestAdmin\nApproving video No.1 on queue page 1000000...\nOK\n \nSearching for the Approved video...\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_queue.py\", line 40, in test_ApproveVideo\n    queue.ProcessVideo(self,sel,page,number,\"Approved\")\n  File \"/home/jed/RC-testing/MiroCommunity/queue.py\", line 151, in ProcessVideo\n    print CheckVideoStatus(self,sel,videoTitle,action)\n  File \"/home/jed/RC-testing/MiroCommunity/queue.py\", line 76, in CheckVideoStatus\n    trimmedTitle = mclib.split_by_punctuation_char(title)\nAttributeError: \'module\' object has no attribute \'split_by_punctuation_char\'\n';</script>
+</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>testcases_queue.TestCase_FeatureVideo</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c39',1)">Detail</a></td>
+</tr>
+
+<tr id='ft39.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_FeatureVideo</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft39.1', 'test_FeatureVideo')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft39.1'] = 'Logged in as seleniumTestAdmin\nFeaturing video No.1 on queue page 1...\nOK\n \nSearching for the Featured video...\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_queue.py\", line 64, in test_FeatureVideo\n    queue.ProcessVideo(self,sel,page,number,\"Featured\")\n  File \"/home/jed/RC-testing/MiroCommunity/queue.py\", line 151, in ProcessVideo\n    print CheckVideoStatus(self,sel,videoTitle,action)\n  File \"/home/jed/RC-testing/MiroCommunity/queue.py\", line 76, in CheckVideoStatus\n    trimmedTitle = mclib.split_by_punctuation_char(title)\nAttributeError: \'module\' object has no attribute \'split_by_punctuation_char\'\n';</script>
+</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>testcases_queue.TestCase_RejectVideo</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c40',1)">Detail</a></td>
+</tr>
+
+<tr id='ft40.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_RejectVideo</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft40.1', 'test_RejectVideo')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft40.1'] = 'Logged in as seleniumTestAdmin\nRejecting video No.1 on queue page 1...\nOK\n \nSearching for the Rejected video...\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_queue.py\", line 87, in test_RejectVideo\n    queue.ProcessVideo(self,sel,page,number,\"Rejected\")\n  File \"/home/jed/RC-testing/MiroCommunity/queue.py\", line 151, in ProcessVideo\n    print CheckVideoStatus(self,sel,videoTitle,action)\n  File \"/home/jed/RC-testing/MiroCommunity/queue.py\", line 76, in CheckVideoStatus\n    trimmedTitle = mclib.split_by_punctuation_char(title)\nAttributeError: \'module\' object has no attribute \'split_by_punctuation_char\'\n';</script>
+</td>
+</tr>
+
+<tr class='passClass'>
+    <td>testcases_queue.TestCase_ApprovePage</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c41',1)">Detail</a></td>
+</tr>
+
+<tr id='pt41.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_ApprovePage</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('pt41.1', 'test_ApprovePage')">pass</a>
+<script language="javascript" type="text/javascript">output_list['pt41.1'] = 'Logged in as seleniumTestAdmin\nMemorizing the list of videos found on the page...\nFound the following videos on the queue page 1:\n[u\'Renault Inside - Manufacturing process of the M\\xe9gane Coup\\xe9 Cabriolet\', u\'MSNBC Rachel Maddow (video) - 07-15-2010-204557\', u\'Renault - Tangier plant sets new standards\', u\'MSNBC Rachel Maddow (video) - 07-16-2010-202653\', u\'Lime Rock Preview\', u\'MSNBC Rachel Maddow (video) - 07-19-2010-210000\', u\'NEW FIXED CRACK FOR Blacklight Tango Down\', u\'\\u0422\\u0443\\u0440\\u0438\\u0437\\u043c \\u0438 \\u043e\\u0434\\u044b\\u0445 \\u0432 \\u0418\\u0437\\u0440\\u0430\\u0438\\u043b\\u0435 \\u0442+7(499) 346 -2004 \\u0442+37257001169\', \'None\', \'None\']\nApproved page\nChecking that all the videos were successfully approved...\nFound video *Renault Inside - Manufacturing process of the Mégane Coupé Cabriolet* at URL: /video/43409/renault-inside-manufacturing-p\nFound video *MSNBC Rachel Maddow (video) - 07-15-2010-204557* at URL: /video/43410/msnbc-rachel-maddow-video-07-1\nFound video *Renault - Tangier plant sets new standards* at URL: /video/43412/renault-tangier-plant-sets-new\nFound video *MSNBC Rachel Maddow (video) - 07-16-2010-202653* at URL: /video/43415/msnbc-rachel-maddow-video-07-1\nFound video *Lime Rock Preview* at URL: /video/43420/lime-rock-preview\nFound video *MSNBC Rachel Maddow (video) - 07-19-2010-210000* at URL: /video/43437/msnbc-rachel-maddow-video-07-1\nFound video *NEW FIXED CRACK FOR Blacklight Tango Down* at URL: /video/43451/new-fixed-crack-for-blacklight\nFound video *Туризм и одых в Израиле т+7(499) 346 -2004 т+37257001169* at URL: /video/43454/7499-346-2004-37257001169\nN/A\nN/A\n';</script>
+</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>testcases_queue.TestCase_RejectPage</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c42',1)">Detail</a></td>
+</tr>
+
+<tr id='ft42.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_RejectPage</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft42.1', 'test_RejectPage')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft42.1'] = 'Logged in as seleniumTestAdmin\nMemorizing the list of videos found on the page...\nFound the following videos on the queue page 1:\n[\'None\', \'None\', \'None\', \'None\', \'None\', \'None\', \'None\', \'None\', \'None\', \'None\']\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_queue.py\", line 132, in test_RejectPage\n    videosRejected = queue.RejectVideoPage(self,sel,page)\n  File \"/home/jed/RC-testing/MiroCommunity/queue.py\", line 253, in RejectVideoPage\n    sel.click(rejectButton)\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 284, in click\n    self.do_command(\"click\", [locator,])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 215, in do_command\n    raise Exception, data\nException: ERROR: Element //div[@id=\'content\']/a[2]/span not found\n';</script>
+</td>
+</tr>
+
+<tr class='passClass'>
+    <td>testcases_queue.TestCase_RSSVideosAwaitingModeration</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c43',1)">Detail</a></td>
+</tr>
+
+<tr id='pt43.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_RSSVideosAwaitingModeration</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('pt43.1', 'test_RSSVideosAwaitingModeration')">pass</a>
+<script language="javascript" type="text/javascript">output_list['pt43.1'] = 'Logged in as seleniumTestAdmin\nClicking Unapproved RSS link\nQueue is empty. RSS feed is unavailable\n\nClicking Unapproved User RSS link\nQueue is empty. RSS feed is unavailable\n';</script>
+</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>testcases_queue.TestCase_ClearQueue</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c44',1)">Detail</a></td>
+</tr>
+
+<tr id='ft44.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_ClearQueue</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft44.1', 'test_ClearQueue')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft44.1'] = 'Logged in as seleniumTestAdmin\nMemorizing the list of videos found on page 1...\nMemorizing the list of videos found on the last page...\nFound the following videos on the first and last pages of the queue:\n[]\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_queue.py\", line 180, in test_ClearQueue\n    videosRejected = queue.ClearQueue(self,sel)\n  File \"/home/jed/RC-testing/MiroCommunity/queue.py\", line 340, in ClearQueue\n    sel.click(clearButton)\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 284, in click\n    self.do_command(\"click\", [locator,])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 215, in do_command\n    raise Exception, data\nException: ERROR: Element //div[@id=\'content\']/a[3]/span not found\n';</script>
+</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>testcases_bulkedit.testcase_BulkEdit_EditAndDelete</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c45',1)">Detail</a></td>
+</tr>
+
+<tr id='ft45.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_case</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft45.1', 'test_case')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft45.1'] = '\nStarting \'testcase_BulkEdit_EditAndDelete\' test case...\nLoging in as admin and going to \'View Admin\' page...\nDeleting videos...\nAdding a user...\nAdding a category...\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_bulkedit.py\", line 474, in test_case\n    self.LoginDeleteVideosAddUserAddCategoryAddVideos()\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_bulkedit.py\", line 456, in LoginDeleteVideosAddUserAddCategoryAddVideos\n    self.AddCategory()\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_bulkedit.py\", line 370, in AddCategory\n    sel.click(gAddCategoryButtonOnCategoryPage)\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 284, in click\n    self.do_command(\"click\", [locator,])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 215, in do_command\n    raise Exception, data\nException: ERROR: Element XPath=id(\'content\')/a/span not found\n';</script>
+</td>
+</tr>
+
+<tr class='passClass'>
+    <td>testcases_bulkedit.testcase_BulkEdit_FeatureAndUnfeature</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c46',1)">Detail</a></td>
+</tr>
+
+<tr id='pt46.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('pt46.1', 'test_case')">pass</a>
+<script language="javascript" type="text/javascript">output_list['pt46.1'] = '\nStarting \'testcase_BulkEdit_FeatureAndUnfeature\' test case...\nLoging in as admin and going to the \'View Admin\' page...\nDeleting videos...\nSubmitting the first video...\nSubmitting the second video...\nOpening \'Bulk Edit\' page...\nSearching all videos with \'gVideosLabel\'...\nFeaturing all found videos...\nVerifying if videos have been featured...\nUnfeaturing videos...\nVerifying if videos have been unfeatured...\n';</script>
+</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>testcases_bulkedit.testcase_BulkEdit_EditSingleVideo</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c47',1)">Detail</a></td>
+</tr>
+
+<tr id='ft47.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_case</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft47.1', 'test_case')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft47.1'] = '\nStarting \'testcase_BulkEdit_EditSingleVideo\' test case...\nLoging in as admin and going to \'View Admin\' page...\nDeleting videos...\nAdding a user...\nAdding a category...\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_bulkedit.py\", line 614, in test_case\n    self.LoginDeleteVideosAddUserAddCategoryAddVideos()\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_bulkedit.py\", line 456, in LoginDeleteVideosAddUserAddCategoryAddVideos\n    self.AddCategory()\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_bulkedit.py\", line 370, in AddCategory\n    sel.click(gAddCategoryButtonOnCategoryPage)\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 284, in click\n    self.do_command(\"click\", [locator,])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 215, in do_command\n    raise Exception, data\nException: ERROR: Element XPath=id(\'content\')/a/span not found\n';</script>
+</td>
+</tr>
+
+<tr class='passClass'>
+    <td>testcases_bulkedit.testcase_BulkEdit_DeleteSingleVideo</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c48',1)">Detail</a></td>
+</tr>
+
+<tr id='pt48.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('pt48.1', 'test_case')">pass</a>
+<script language="javascript" type="text/javascript">output_list['pt48.1'] = '\nStarting \'testcase_BulkEdit_DeleteSingleVideo\' test case...\nLoging in as admin and going to the \'View Admin\' page...\nDeleting videos...\nSubmitting the first video...\nSubmitting the second video...\nOpening \'Bulk Edit\' page...\nSearching all videos with \'gVideosLabel\'...\nDeleting the first video...\nChecking if video has been deleted...\n';</script>
+</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>testcases_bulkedit.testcase_BulkEdit_UnapproveCurrent</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c49',1)">Detail</a></td>
+</tr>
+
+<tr id='ft49.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_case</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft49.1', 'test_case')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft49.1'] = '\nLoging in as admin and going to the \'View Admin\' page...\nDeleting videos...\nSubmitting the first video...\nSubmitting the second video...\nOpening \'Review Queue\' page...\nClearing the queue\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_bulkedit.py\", line 701, in test_case\n    sel.click(gClearQueueButtonOnReviewQueuePage)\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 284, in click\n    self.do_command(\"click\", [locator,])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 215, in do_command\n    raise Exception, data\nException: ERROR: Element XPath=id(\'content\')/a[3]/span not found\n';</script>
+</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>testcases_bulkedit.testcase_BulkEdit_UnapproveFeatured</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c50',1)">Detail</a></td>
+</tr>
+
+<tr id='ft50.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_case</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft50.1', 'test_case')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft50.1'] = '\nLoging in as admin and going to the \'View Admin\' page...\nDeleting videos...\nSubmitting the first video...\nSubmitting the second video...\nOpening \'Bulk Edit\' page...\nSearching all videos with \'gVideosLabel\'...\nFeaturing all found videos...\nOpening \'Review Queue\' page...\nClearing the queue\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_bulkedit.py\", line 701, in test_case\n    sel.click(gClearQueueButtonOnReviewQueuePage)\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 284, in click\n    self.do_command(\"click\", [locator,])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 215, in do_command\n    raise Exception, data\nException: ERROR: Element XPath=id(\'content\')/a[3]/span not found\n';</script>
+</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>testcases_categories.TestCase_RestoreAllCategories</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c51',1)">Detail</a></td>
+</tr>
+
+<tr id='ft51.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_RestoreAllCategories</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft51.1', 'test_RestoreAllCategories')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft51.1'] = 'Logged in as seleniumTestAdmin\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_categories.py\", line 247, in test_RestoreAllCategories\n    categories.DeleteAllCategories(self,sel)\n  File \"/home/jed/RC-testing/MiroCommunity/categories.py\", line 293, in DeleteAllCategories\n    sel.open(testvars.MCTestVariables[\"CategoriesPage\"])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 764, in open\n    self.do_command(\"open\", [url,])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 215, in do_command\n    raise Exception, data\nException: XHR ERROR: URL = http://dalmatia.mirocommunity.org/admin/categories Response_Code = 500 Error_Message = Internal Server Error\n';</script>
+</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>testcases_comments.testcase_Comments_NoModeration_NoLogin</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c52',1)">Detail</a></td>
+</tr>
+
+<tr id='ft52.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_case</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft52.1', 'test_case')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft52.1'] = '\nRunning test case in theme: LIST\nLogged in as seleniumTestAdmin\nStarting test for UNLOGGED USER\nClicking first video on the page...\nGenerating and posting a comment...\nAsserting comment is on the page...\nStarting test for LOGGED USER\nLogging in as User...\nLogged in as seleniumTestUser\nClicking on the first video on the page...\nGenerating and posting a new comment...\nAsserting the comment is on the page...\nGoing back on main page...\nLogging out...\nStarting test for ADMIN\nLogging in as admin...\nLogged in as seleniumTestAdmin\nClicking first video on the page...\nGenerating and posting new comment...\nAsserting comment is on the page...\nDeleting comment posted by unlogged user...\nDeleting comment posted by logged user...\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_comments.py\", line 577, in test_case\n    self.AdminTest()\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_comments.py\", line 505, in LoggedAsAdmin_CommentPosted\n    sel.click(self.themeToTest.deleteCommentButtonPart1 + self.commentUser +self.themeToTest.deleteCommentButtonPart2)\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 284, in click\n    self.do_command(\"click\", [locator,])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 215, in do_command\n    raise Exception, data\nException: ERROR: Element //li[contains(.,\'Test comment:_11h53m50sec_20/7/2010\')]/div/div/form[button=\'delete\']/button not found\n';</script>
+</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>testcases_comments.testcase_Comments_NoModeration_LoginRequired</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c53',1)">Detail</a></td>
+</tr>
+
+<tr id='ft53.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_case</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft53.1', 'test_case')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft53.1'] = '\nRunning test case in theme: LIST\nLogged in as seleniumTestAdmin\nStarting test for UNLOGGED USER\nClicking first video on the page...\nChecking that input fields to post a comment are not on the page...\nStarting test for LOGGED USER\nLogging in as User...\nLogged in as seleniumTestUser\nClicking on the first video on the page...\nGenerating and posting a new comment...\nAsserting the comment is on the page...\nGoing back on main page...\nLogging out...\nStarting test for ADMIN\nLogging in as admin...\nLogged in as seleniumTestAdmin\nClicking first video on the page...\nGenerating and posting new comment...\nAsserting comment is on the page...\nDeleting comment posted by logged user...\nDeleting comment posted by Admin...\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_comments.py\", line 577, in test_case\n    self.AdminTest()\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_comments.py\", line 509, in LoggedAsAdmin_CommentPosted\n    sel.click(self.themeToTest.deleteCommentButtonPart1 + self.comment +self.themeToTest.deleteCommentButtonPart2)\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 284, in click\n    self.do_command(\"click\", [locator,])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 215, in do_command\n    raise Exception, data\nException: ERROR: Element //li[contains(.,\'Test comment:_11h54m44sec_20/7/2010\')]/div/div/form[button=\'delete\']/button not found\n';</script>
+</td>
+</tr>
+
+<tr class='failClass'>
+    <td>testcases_comments.testcase_Comments_ModerationRequired_NoLogin</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c54',1)">Detail</a></td>
+</tr>
+
+<tr id='ft54.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_case</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft54.1', 'test_case')">fail</a>
+<script language="javascript" type="text/javascript">output_list['ft54.1'] = '\nRunning test case in theme: LIST\nLogged in as seleniumTestAdmin\nStarting test for UNLOGGED USER\nClicking on the first video on the page...\nGenerating and posting new comment...\nWaiting for notification that comment was sent to moderators...\nERROR: Notification that comment was sent to moderators is not on the page\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_comments.py\", line 571, in test_case\n    self.NotLoggetTest()\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_comments.py\", line 287, in NotLogged_ModerationRequired\n    self.failIf(True)\nAssertionError\n';</script>
+</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>testcases_comments.testcase_Comments_ModerationRequired_LoginRequired</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c55',1)">Detail</a></td>
+</tr>
+
+<tr id='ft55.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_case</div></td>
+    <td colspan='5' align='center'><a href="javascript:showOutput('ft55.1', 'test_case')">error</a>
+<script language="javascript" type="text/javascript">output_list['ft55.1'] = '\nRunning test case in theme: LIST\nLogged in as seleniumTestAdmin\nStarting test for UNLOGGED USER\nClicking first video on the page...\nChecking that input fields to post a comment are not on the page...\nStarting test for LOGGED USER\nLogging in as User...\nLogged in as seleniumTestUser\nClicking on the first video on the page...\nGenerating and posting new comment...\nWaiting for notification that comment was sent to moderators...\nText \" Your comment has been sent to the moderators. \" is on the page\nLogging out...\nLogging in as Admin...\nLogged in as seleniumTestAdmin\nOpening settings and approving a previously posted comment...\nGoing back on the main page...\nTraceback (most recent call last):\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_comments.py\", line 574, in test_case\n    self.UserTest()\n  File \"/home/jed/RC-testing/MiroCommunity/testcases_comments.py\", line 423, in LoggedAsUser_ModerationRequired\n    sel.click(\'link=View Main Site\')\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 284, in click\n    self.do_command(\"click\", [locator,])\n  File \"/home/jed/RC-testing/MiroCommunity/selenium.py\", line 215, in do_command\n    raise Exception, data\nException: ERROR: Element link=View Main Site not found\n';</script>
+</td>
+</tr>
+
+<tr id='total_row'>
+    <td>Total</td>
+    <td>58</td>
+    <td>23</td>
+    <td>3</td>
+    <td>32</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+
+</body>
+</html>
