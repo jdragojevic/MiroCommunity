@@ -306,7 +306,7 @@ gSortByDateImported = "XPath=id('labels')/form[2]/table/thead/tr/th[6]/a"
 #-----
 
 global gSeleniumServerPort
-gSeleniumServerPort = 4445
+gSeleniumServerPort = 4444
 
 global gTimeOut
 gTimeOut = 20
