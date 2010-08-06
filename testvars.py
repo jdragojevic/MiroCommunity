@@ -5,8 +5,8 @@ initialCategories = [""]
 
 MCTestVariables = {"Browser":"*chrome", \
                    "TestSite":"http://dalmatia.mirocommunity.org/", \
-                   "ResultOutputDirectory":r"/Results/", \
-                   "GraphicFilesDirectory":r"/TestInput/", \
+                   "ResultOutputDirectory":r"Results/", \
+                   "GraphicFilesDirectory":r"TestInput/", \
                    "TimeOut":"150000", \
                    "AdminLink":"View Admin", \
                    "AdminLogin":"seleniumTestAdmin", \
