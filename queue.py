@@ -38,6 +38,14 @@
 #   * subroutine ViewRSSFeeds(self,sel,feed) - opens RSS feeds with videos awaiting
 #                moderation and checks relevant pages
 #                <feed> must be = "Unapproved RSS" or "Unapproved User RSS"
+#   * function FindVideoInQueue(self,sel,title) - returns page number and video number
+#                for a video in the premoderation queue
+#                If not found, the function returns [0,0]
+#   * subroutine RejectVideoFromQueue(self,sel,title) - checks if the video being
+#                submitted is in the premoderation queue ("Unapproved") 
+#                If yes, rejects it
+#                <title> should be in Unicode format
+#                Created for extensive use in Submit Video test cases
 
 from selenium import selenium
 
@@ -90,7 +98,8 @@ def CheckVideoStatus(self,sel,title,status):
         print "Found video \""+title+"\" in the list of "+status+" videos - OK"
         return True
     else:    
-        mclib.AppendErrorMessage(self,sel,"Query did not return the video "+title)
+#        mclib.AppendErrorMessage(self,sel,"Query did not return the video "+title)
+        print "Query did not return the video "+title
         print "Also tried searching by: "+trimmedTitle
         return False
 
@@ -684,4 +693,76 @@ def ViewRSSFeeds(self,sel,feed):
 #                    print "Found: "+watchLinkURL
         else:
             print "Could not find any videos in this RSS feed"
-    
+
+
+# =======================================
+# =         FIND VIDEO IN QUEUE         =
+# =======================================
+
+# This function returns page number and video number for a video
+# in the premoderation queue
+# If not found, the function returns [0,0]
+
+def FindVideoInQueue(self,sel,title):
+    resRow = 0
+    resPage = 0
+    page = 1
+    firstVideoOnPreviousPage = 'some_dummy_text'
+    try:
+        sel.open(testvars.MCTestVariables["ReviewQueuePage"]+"/?page="+str(page))
+        sel.wait_for_page_to_load(testvars.MCTestVariables["TimeOut"])
+    except: pass
+    time.sleep(10)
+    row = 1
+    titleElement = "//div[@id='admin_videolisting_row']/div["+str(row)+"]/div[1]/h3/a"
+    if sel.is_element_present(titleElement)==True:
+        firstVideoOnCurrentPage = sel.get_text(titleElement)  # Memorizing the first title on the page for page identification
+    else:
+        firstVideoOnCurrentPage = firstVideoOnPreviousPage
+    while firstVideoOnCurrentPage!=firstVideoOnPreviousPage:  # page increment produces a new page, rather than reopens the previous page
+        # Cycle through all videos on the page 
+        while sel.is_element_present(titleElement)==True:
+            tempTitle = sel.get_text(titleElement)
+            #print tempTitle
+            if tempTitle==title:
+                break
+            row = row+1
+            titleElement = "//div[@id='admin_videolisting_row']/div["+str(row)+"]/div[1]/h3/a"
+        if tempTitle==title:
+            resRow = row
+            resPage = page
+            break
+        page = page + 1
+        try:
+            sel.open(testvars.MCTestVariables["ReviewQueuePage"]+"/?page="+str(page))
+            sel.wait_for_page_to_load(testvars.MCTestVariables["TimeOut"])
+        except: pass
+        #print "Opened page "+str(page)
+        time.sleep(10)
+        row = 1
+        titleElement = "//div[@id='admin_videolisting_row']/div["+str(row)+"]/div[1]/h3/a"
+        firstVideoOnPreviousPage = firstVideoOnCurrentPage
+        firstVideoOnCurrentPage = sel.get_text(titleElement)
+    return [resPage,resRow]
+
+
+
+# =======================================
+# =       REJECT VIDEO FROM QUEUE       =
+# =======================================
+
+# This subroutine checks if the video being submitted is in the premoderation queue ("Unapproved") 
+# If yes, rejects it
+# <title> should be in Unicode format
+
+def RejectVideoFromQueue(self,sel,title):
+    videoLocation = FindVideoInQueue(self,sel,title)
+    if videoLocation!=[0,0]:
+        print "Found video '"+title+"' in the review queue. Preparing to reject it..."
+        page = str(videoLocation[0])
+        number = videoLocation[1]
+        action = "Rejected"
+        ProcessVideo(self,sel,page,number,action)
+    else:
+        print "Could not find video '"+title+"' in the premoderation queue"
+

@@ -5,9 +5,9 @@ initialCategories = [""]
 
 MCTestVariables = {"Browser":"*chrome", \
                    "TestSite":"http://dalmatia.mirocommunity.org/", \
-                   "ResultOutputDirectory":r"/home/jed/public/Results/", \
-                   "GraphicFilesDirectory":r"/home/jed/RC-testing/MiroCommunity/TestInput/", \
-                   "TimeOut":"60000", \
+                   "ResultOutputDirectory":r"/var/www/localtv_dev/djangoproject/dalmatia_project/selenium/sel-rc/MiroCommunity/TestResults/file_", \
+                   "GraphicFilesDirectory":r"/var/www/localtv_dev/djangoproject/dalmatia_project/selenium/sel-rc/MiroCommunity/TestInput/", \
+                   "TimeOut":"150000", \
                    "AdminLink":"View Admin", \
                    "AdminLogin":"seleniumTestAdmin", \
                    "AdminPassword":"TestAdmin", \
@@ -33,6 +33,7 @@ MCTestVariables = {"Browser":"*chrome", \
                    "CategoriesLogoURL":"http://s3.mirocommunity.org.s3.amazonaws.com/dalmatia/localtv/category_logos", \
                    "SiteLogoURL":"http://s3.mirocommunity.org.s3.amazonaws.com/dalmatia/localtv/site_logos", \
                    "SiteBackgroundURL":"http://s3.mirocommunity.org.s3.amazonaws.com/dalmatia/localtv/site_backgrounds", \
+                   "Port":4445,
                   }
 
 # The following data dictionary contains the references to
