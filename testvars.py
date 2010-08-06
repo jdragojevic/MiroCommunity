@@ -5,8 +5,8 @@ initialCategories = [""]
 
 MCTestVariables = {"Browser":"*chrome", \
                    "TestSite":"http://dalmatia.mirocommunity.org/", \
-                   "ResultOutputDirectory":r"/var/www/localtv_dev/djangoproject/dalmatia_project/selenium/sel-rc/MiroCommunity/TestResults/file_", \
-                   "GraphicFilesDirectory":r"/var/www/localtv_dev/djangoproject/dalmatia_project/selenium/sel-rc/MiroCommunity/TestInput/", \
+                   "ResultOutputDirectory":r"/Results/", \
+                   "GraphicFilesDirectory":r"/TestInput/", \
                    "TimeOut":"150000", \
                    "AdminLink":"View Admin", \
                    "AdminLogin":"seleniumTestAdmin", \
