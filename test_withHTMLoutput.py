@@ -126,7 +126,7 @@ class Test_HTMLTestRunner(unittest.TestCase):
         f = open(filename, 'w')
         f.write(byte_output)
         f.close()
-        lastrun = testvars.MSTestVariables["ResultOutputDirectory"] + 'last_run.html'
+        lastrun = testvars.MCTestVariables["ResultOutputDirectory"] + 'last_run.html'
         shutil.copyfile(filename,lastrun)
 
 ##############################################################################
