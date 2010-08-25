@@ -7,7 +7,7 @@ MCTestVariables = {"Browser":"*chrome", \
                    "TestSite":"http://dalmatia.mirocommunity.org/", \
                    "ResultOutputDirectory":r"Results/", \
                    "GraphicFilesDirectory":r"TestInput/", \
-                   "TimeOut":"150000", \
+                   "TimeOut":"90000", \
                    "AdminLink":"View Admin", \
                    "AdminLogin":"seleniumTestAdmin", \
                    "AdminPassword":"TestAdmin", \
@@ -33,7 +33,7 @@ MCTestVariables = {"Browser":"*chrome", \
                    "CategoriesLogoURL":"http://s3.mirocommunity.org.s3.amazonaws.com/dalmatia/localtv/category_logos", \
                    "SiteLogoURL":"http://s3.mirocommunity.org.s3.amazonaws.com/dalmatia/localtv/site_logos", \
                    "SiteBackgroundURL":"http://s3.mirocommunity.org.s3.amazonaws.com/dalmatia/localtv/site_backgrounds", \
-                   "Port":4445,
+                   "Port":4444,
                   }
 
 # The following data dictionary contains the references to

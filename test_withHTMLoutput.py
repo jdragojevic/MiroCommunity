@@ -2,6 +2,7 @@
 from selenium import selenium
 #import system emodules
 import unittest, time, re
+import shutil
 import StringIO
 import sys
 import HTMLTestRunner
@@ -121,10 +122,12 @@ class Test_HTMLTestRunner(unittest.TestCase):
         # check out the output
         byte_output = buf.getvalue()
         # output the main test results
-        filename=testvars.MCTestVariables["ResultOutputDirectory"]+'MC_test_results_'+time.strftime("%d-%m-%Y_%H-%M", time.gmtime())+'_GMT.html'
+        filename=testvars.MCTestVariables["ResultOutputDirectory"]+'MC_'+time.strftime("%Y%d%m_%H%M", time.gmtime())+'_GMT.html'
         f = open(filename, 'w')
         f.write(byte_output)
         f.close()
+        lastrun = testvars.MSTestVariables["ResultOutputDirectory"] + 'last_run.html'
+        shutil.copyfile(filename,lastrun)
 
 ##############################################################################
 # Executing this module from the command line
