@@ -6,7 +6,7 @@ initialCategories = [""]
 MCTestVariables = {"Browser":"*chrome", \
                    "TestSite":"http://dalmatia.mirocommunity.org/", \
                    "ResultOutputDirectory":r"Results/", \
-                   "GraphicFilesDirectory":r"TestInput/", \
+                   "GraphicFilesDirectory":r"/home/jed/RC-testing/MiroCommunity/TestInput/", \
                    "TimeOut":"90000", \
                    "AdminLink":"View Admin", \
                    "AdminLogin":"seleniumTestAdmin", \
