@@ -29,7 +29,9 @@ MCTestVariables = {"Browser":"*chrome", \
                    "UserPage":"/admin/users/", \
                    "ProfilePage":"/accounts/profile/", \
                    "ViewAdmin":"//div[@id='header']/a[2]/span", \
+                   "ViewAdminBlueTheme":"//div[@id='wrapper']/div[1]/div/ul[2]/li/a/span", \
                    "SaveChanges":"//div[@id='labels']/form/table/tbody/tr[2]/td[1]/div/button", \
+                   "EditSaveChanges":"//button[@name='submit' and @value='Save']", \
                    "CategoriesLogoURL":"http://s3.mirocommunity.org.s3.amazonaws.com/dalmatia/localtv/category_logos", \
                    "SiteLogoURL":"http://s3.mirocommunity.org.s3.amazonaws.com/dalmatia/localtv/site_logos", \
                    "SiteBackgroundURL":"http://s3.mirocommunity.org.s3.amazonaws.com/dalmatia/localtv/site_backgrounds", \
