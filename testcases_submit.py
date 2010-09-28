@@ -17,7 +17,10 @@ from selenium import selenium
 import unittest, time, re, loginlogout, sitesettings, testvars, queue, submitvideos
 import sys
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> upstream/master
 # ----------------------------------------------------------------------
 
 class TestCase_SubmitVideoAsAdmin(unittest.TestCase):
@@ -25,7 +28,11 @@ class TestCase_SubmitVideoAsAdmin(unittest.TestCase):
 # Open the desired browser and set up the test
     def setUp(self):
         self.verificationErrors = []
+<<<<<<< HEAD
         self.selenium = selenium("localhost", 4444, "*chrome", "http://dalmatia.mirocommunity.org/")
+=======
+        self.selenium = selenium("localhost", testvars.MCTestVariables["Port"], testvars.MCTestVariables["Browser"], testvars.MCTestVariables["TestSite"])
+>>>>>>> upstream/master
         self.selenium.start()
 
     def test_SubmitVideoAsAdmin(self):
@@ -72,7 +79,11 @@ class TestCase_SubmitVideoAsLoggedUser(unittest.TestCase):
 # Open the desired browser and set up the test
     def setUp(self):
         self.verificationErrors = []
+<<<<<<< HEAD
         self.selenium = selenium("localhost", 4444, "*chrome", "http://dalmatia.mirocommunity.org/")
+=======
+        self.selenium = selenium("localhost", testvars.MCTestVariables["Port"], testvars.MCTestVariables["Browser"], testvars.MCTestVariables["TestSite"])
+>>>>>>> upstream/master
         self.selenium.start()
 
 # The user actions executed in the test scenario
@@ -131,7 +142,11 @@ class TestCase_SubmitVideoAsUnloggedUser(unittest.TestCase):
 # Open the desired browser and set up the test
     def setUp(self):
         self.verificationErrors = []
+<<<<<<< HEAD
         self.selenium = selenium("localhost", 4444, "*chrome", "http://dalmatia.mirocommunity.org/")
+=======
+        self.selenium = selenium("localhost", testvars.MCTestVariables["Port"], testvars.MCTestVariables["Browser"], testvars.MCTestVariables["TestSite"])
+>>>>>>> upstream/master
         self.selenium.start()
 
 # The user actions executed in the test scenario
@@ -187,7 +202,11 @@ class TestCase_SubmitVideoFromAdminPage(unittest.TestCase):
 # Open the desired browser and set up the test
     def setUp(self):
         self.verificationErrors = []
+<<<<<<< HEAD
         self.selenium = selenium("localhost", 4444, "*chrome", "http://dalmatia.mirocommunity.org/")
+=======
+        self.selenium = selenium("localhost", testvars.MCTestVariables["Port"], testvars.MCTestVariables["Browser"], testvars.MCTestVariables["TestSite"])
+>>>>>>> upstream/master
         self.selenium.start()
 
 # The user actions executed in the test scenario
@@ -225,7 +244,11 @@ class TestCase_SubmitDuplicateVideo(unittest.TestCase):
 # Open the desired browser and set up the test
     def setUp(self):
         self.verificationErrors = []
+<<<<<<< HEAD
         self.selenium = selenium("localhost", 4444, "*chrome", "http://dalmatia.mirocommunity.org/")
+=======
+        self.selenium = selenium("localhost", testvars.MCTestVariables["Port"], testvars.MCTestVariables["Browser"], testvars.MCTestVariables["TestSite"])
+>>>>>>> upstream/master
         self.selenium.start()
 
     def ChangeThemeAndSubmitDuplicateVideo(self,sel,theme,testVideoURL):
@@ -279,7 +302,11 @@ class TestCase_SubmitVideoWithEmbedCode(unittest.TestCase):
 # Open the desired browser and set up the test
     def setUp(self):
         self.verificationErrors = []
+<<<<<<< HEAD
         self.selenium = selenium("localhost", 4444, "*chrome", "http://dalmatia.mirocommunity.org/")
+=======
+        self.selenium = selenium("localhost", testvars.MCTestVariables["Port"], testvars.MCTestVariables["Browser"], testvars.MCTestVariables["TestSite"])
+>>>>>>> upstream/master
         self.selenium.start()
 
 # The user actions executed in the test scenario
